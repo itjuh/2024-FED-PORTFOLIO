@@ -4,22 +4,9 @@ const infoData = {
     Skills: ["html,css", "javascript,jquery", "React", "Vue.js", "Flutter"],
     Education: ["2020.10 ~ 2021.03", "2023.07 ~ 2024.01"],
 };
-const skillStack = {
-    "html,css": ["시멘틱 태그구성, 반응형 웹 구현"],
-    "javascript,jquery": ["DOM 조작으로 동적컨텐츠 변경", "비동기 프로그래밍 구현", "JSON 데이터 처리"],
-    React: ["함수형 컴포넌트 사용", "useState, useRef 등 Hook활용", "useContext API 활용", "라우터 페이지 구성"],
-    "Vue.js": ["뷰 컴포넌트 구성"],
-    Flutter: ["statelessWidget 구성", "statefulWidget 구성", "라우터 페이지 연결,"],
-};
-const edu = {
-    "2020.10 ~ 2021.03": ["자바,파이썬기반^빅데이터분석 머신러닝활용"],
-    "2023.07 ~ 2024.01": ["프론트엔드(React, PHP)^플러터(Flutter)활용^웹&앱개발 양성과정"],
-};
-const etcLink = {
-    깃허브: "이동하기",
-    블로그: "이동하기",
-    이력서: "이력서 파일보기",
-};
+const etcLinkData = [
+    'https://github.com/itjuh','https://velog.io/@it-ju/posts','https://itjuh.github.io/FED-RF-2023-AJH/1000.personal/resume.pdf'
+];
 const detailData = {
     "html,css": "시멘틱 태그구성, 반응형 웹 구현",
     "javascript,jquery": "DOM 조작으로 동적컨텐츠 변경^비동기 프로그래밍 구현^JSON 데이터 처리",
@@ -28,9 +15,9 @@ const detailData = {
     Flutter: "statelessWidget 구성^statefulWidget 구성^라우터 페이지 연결",
     "2020.10 ~ 2021.03": "자바,파이썬기반^빅데이터분석 머신러닝활용",
     "2023.07 ~ 2024.01": "프론트엔드(React, PHP)^플러터(Flutter)활용^웹&앱개발 양성과정",
-    깃허브: "이동하기",
-    블로그: "이동하기",
-    이력서: "이력서 파일보기",
+    깃허브: "이동하기 ↗",
+    블로그: "이동하기 ↗",
+    이력서: "이력서 파일보기 ↗",
 };
 const siteData = [
     {
@@ -61,4 +48,4 @@ const siteData = [
     },
 ];
 const txtMsg = '** 주문하신 `안주현소개`는 지속적으로 업데이트 예정입니다. 문의 사항은 010.2144.9679또는 jh.2144.9679@gmail로 연락주시면 바로 처리해드립니다.';
-export { detailData, infoData, skillStack, edu, siteData, etcLink, txtMsg };
+export { detailData, infoData, siteData, txtMsg, etcLinkData };

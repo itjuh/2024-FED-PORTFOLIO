@@ -1,23 +1,32 @@
 import { LiaReceiptSolid } from "react-icons/lia";
 import "../../css/profile.css";
 import { useEffect, useLayoutEffect } from "react";
-import { infoData, detailData, txtMsg } from "../data/infoData.js";
+import { infoData, detailData, txtMsg, etcLinkData } from "../data/infoData.js";
 import { useNavigate } from "react-router-dom";
 
 export function Profile() {
-    useLayoutEffect(() => {
-        const frame = document.querySelector(".frame-box");
-        frame.style.height = "auto";
-        frame.style.borderRadius = "0px 0px 20px 20px";
-        frame.style.marginTop = "0px";
-        document.querySelector('.receipt-area').style.transform = 'translateY(-101%)';
-    }, []);
+    // 데이터 가져오기
     const keyList = Object.keys(infoData);
     const dataList = Object.values(infoData);
     dataList.shift();
 
     // 페이지 이동
     const nav = useNavigate();
+
+    useLayoutEffect(() => {
+        const frame = document.querySelector(".frame-box");
+        frame.style.height = "auto";
+        frame.style.borderRadius = "0px 0px 20px 20px";
+        frame.style.marginTop = "0px";
+        document.querySelector('.receipt-area').style.transform = 'translateY(-101%)';
+
+        const linkLi = document.querySelectorAll('.link li span');
+        // etcLinkData
+        linkLi.forEach((ele,idx)=>{
+            ele.style.cursor = 'pointer';
+            ele.addEventListener('click', ()=>{window.open(etcLinkData[idx],"_blank")});
+        })
+    }, []);
 
     function whiteSpace(str) {
         if (str.indexOf("^") > 0) {
@@ -55,7 +64,7 @@ export function Profile() {
                     </div>
                 </div>
                 {dataList.map((v, i) => (
-                    <div className="etc">
+                    <div className={"etc "+ Object.keys(infoData)[i + 1].toLowerCase()} key={i + 1} >
                         <div className="sub-tit">{Object.keys(infoData)[i + 1].toUpperCase()}</div>
                         <div className="sub-cont">
                             <ul>

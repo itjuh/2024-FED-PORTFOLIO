@@ -1,0 +1,36 @@
+{
+    "items":[
+        {
+            "part":"main",
+            "title":"안주현소개",
+            "recommand":2,
+            "color":"#ff7171",
+            "src":"<MdFace3 />",
+            "link":""
+        },
+        {
+            "part":"portfolio",
+            "title":"온고롱케이크",
+            "recommand":null,
+            "color":"#48742c",
+            "src":"<RiCake3Line />",
+            "link":""
+        },
+        {
+            "part":"portfolio",
+            "title":"레오폴드키보드",
+            "recommand":null,
+            "color":"#20b2aa",
+            "src":"<LiaKeyboard />",
+            "link":""
+        },
+        {
+            "part":"portfolio",
+            "title":"더진한베이스",
+            "recommand":null,
+            "color":"#f29d38",
+            "src":"<SiBuymeacoffee />",
+            "link":""
+        }
+    ]
+}

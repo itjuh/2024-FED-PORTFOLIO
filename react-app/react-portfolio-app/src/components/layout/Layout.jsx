@@ -3,9 +3,9 @@ import TopArea from "./TopArea";
 
 export function Layout(){
     return(
-        <div>
+        <div className="frame-box">
             <TopArea />
             <Main />
-        </div>
+         </div>
     );
 }

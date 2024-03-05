@@ -1,6 +1,7 @@
 import { useLayoutEffect } from "react";
 import "../../css/toparea.css";
 import { Tap } from "../modules/Tap";
+import { FaHome } from "react-icons/fa";
 
 export default function TopArea() {
     let txt = ["추천상품", "메인상품", "포트폴리오"];
@@ -19,7 +20,7 @@ export default function TopArea() {
     return (
         <div className="header">
             <nav className="gnb">
-                <div>홈</div>
+                <div className="home"><FaHome /></div>
                 <h1>Frontend Shop</h1>
                 <div className="more">+</div>
             </nav>

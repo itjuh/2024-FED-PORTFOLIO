@@ -15,29 +15,178 @@
     flex-wrap: wrap;
     gap: 42px 37px;
 }
-.items-area ul li{
+/* 메뉴아이템 unit */
+.lnb-unit{
     flex-shrink: 0;
     width: 236px;
     height: 146px;
     border-radius: 10px;
     background-color: #fff;
     box-shadow: 0 3px 3px #00000033;
+    padding: 8px 13px 13px 6px;
+    box-sizing: border-box;
+    font-family: Pretendard;
+    font-weight: 400;
+    cursor: pointer;
 }
+/* 메뉴 아이템 마우스 오버 */
+.lnb-unit:hover{
+    box-shadow: 0 3px 3px #00000054;
+}
+/* unit 구분 */
+.lnb-part{
+    font-size: 1.6rem;
+}
+/* unit 아이콘 */
+.lnb-icon{
+    font-size: 80px;
+    line-height: 70px;
+    text-align: center;
+}
+/* 메뉴 아이템 마우스 오버 */
+.lnb-unit:hover .lnb-icon{
+    animation: swing-ani .3s linear infinite;
+}
+@keyframes swing-ani {
+    25%{
+        transform: rotate(-5deg);
+    }75%{
+        transform: rotate(5deg);
+    }
+}
+/* unit 이름 */
+.lnb-tit{
+    text-align: center;
+}
+.lnb-tit span:first-child{
+    position: relative;
+    font-size: 2.4rem;
+    font-weight: 600;
+    z-index: 1;
+    /* 이름 밑줄 */
+    background-repeat: no-repeat;
+    background-size: 0% 30%;
+    background-position: bottom left;
+    transition: .3s ease-in-out;
+}
+
+/* 메뉴 아이템 마우스 오버 */
+.lnb-unit:hover .lnb-tit span:first-child{
+    background-size: 100% 30%;
+}
+/* unit 별표 */
+.lnb-tit span+span{
+    position: absolute;
+}
+
 /* 하단 보여주기창 */
 .view-area{
     margin: 0 45px 23px 46px;
     display: flex;
+    font-family: Pretendard;
+    font-weight: 400;
 }
 .selected-view{
+    position: relative;
     width: 310px;
     height: 194px;
     border-radius: 10px;
     background-color: #fff;
     padding: 18px 21px;
     box-sizing: border-box;
+    font-size: 2rem;
+    font-weight: 500;
 }
+/* 선택상품 없는 경우 */
+.sel-null{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    font-size: 2.4rem;
+    color: #bbb;
+    line-height: 1.5;
+}
+/* 선택상품 있는 경우 */
+.sel-cnt{
+    float: right;
+}
+.alert-box{
+    position: absolute;
+    width: 100%;
+    height: 73px;
+    left: 0;
+    bottom: 0;
+    padding: 10px 23px;
+    box-sizing: border-box;
+    border-radius: 0 0 10px 10px;
+    background-color: #ff00007e;
+    color: #303030;
+    line-height: 1.3;
+}
+/* 하단 정보와 버튼 */
 .info-view{
     margin-left: 16px;
     width: 183px;
     height: 194px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+/* 남은시간 */
+.timer{
+    width: 89px;
+    height: 66px;
+    font-size: 2.4rem;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 1px;
+}
+/* 남은시간 숫자 */
+.timer em{
+    color: #ff7144;
+    font-weight: 700;
+}
+/* 삭제버튼 */
+.del-btn{
+    width: 78px;
+    height: 59px;
+    border-radius: 10px;
+    background-color: #afafaf;
+    box-shadow: 0 2px 3px #00000033;
+    color: #fff;
+    font-size: 2.4rem;
+    font-weight: 700;
+    text-align: center;
+    line-height: 59px;
+    cursor: pointer;
+}
+/* 선택상품 */
+.sel-count{
+    width: 183px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 3px #00000033;
+    font-size: 2rem;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 1px;
+    line-height: 50px;
+    margin-top: 13px;
+}
+/* 주문버튼 */
+.order-btn{
+    width: 183px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: #666;
+    box-shadow: 0 2px 3px #00000033;
+    color: #fff;
+    font-size: 2.4rem;
+    font-weight: 700;
+    text-align: center;
+    line-height: 50px;
+    margin-top: 15px;
+    cursor: pointer;
 }

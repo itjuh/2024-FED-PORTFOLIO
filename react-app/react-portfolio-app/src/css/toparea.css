@@ -24,6 +24,9 @@ nav.gnb{
     align-items: center;
 }
 /* 상단 아이콘 */
+.gnb .home{
+    font-size: 4rem;
+}
 .gnb .more{
     width: 30px;
     height: 30px;

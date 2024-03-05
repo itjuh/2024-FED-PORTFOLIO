@@ -6,7 +6,7 @@
             "recommand":2,
             "color":"#ff7171",
             "src":"<MdFace3 />",
-            "link":""
+            "link":"/profile"
         },
         {
             "part":"portfolio",
@@ -14,7 +14,7 @@
             "recommand":null,
             "color":"#48742c",
             "src":"<RiCake3Line />",
-            "link":""
+            "link":"/portfolio"
         },
         {
             "part":"portfolio",
@@ -22,7 +22,7 @@
             "recommand":null,
             "color":"#20b2aa",
             "src":"<LiaKeyboard />",
-            "link":""
+            "link":"/portfolio"
         },
         {
             "part":"portfolio",
@@ -30,7 +30,7 @@
             "recommand":null,
             "color":"#f29d38",
             "src":"<SiBuymeacoffee />",
-            "link":""
+            "link":"/portfolio"
         }
     ]
 }

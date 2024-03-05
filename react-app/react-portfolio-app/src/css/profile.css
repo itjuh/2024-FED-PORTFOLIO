@@ -1,0 +1,137 @@
+/* 타이틀 */
+.receipt-tit {
+    position: relative;
+    display: flex;
+    padding-top: 33px;
+    align-items: center;
+    justify-content: center;
+    gap: 0 8px;
+    z-index: 10;
+    background-color: #dfdfdf;
+}
+.receipt-tit i{
+    font-size: 3rem;
+    vertical-align: baseline;
+}
+.receipt-tit span{
+    font-size: 2rem;
+    vertical-align: baseline;
+}
+/* 인쇄영역 */
+.receipt-tit::after{
+    content: '';
+    position: absolute;
+    width: 600px;
+    height: 15px;
+    background-color: #c2c2c2;
+    bottom: -15px;
+}
+/* 내용파트 */
+.receipt-area{
+    width: 500px;
+    margin: 0 auto;
+    margin-top: 15px;
+    background-color: #fff;
+    box-shadow: 0 3px 3px #00000033;
+    /* transform: translateY(-101%); */
+    transition: transform 3s linear .3s;
+}
+/* about */
+.about-tit{
+    padding: 18px 0;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 500;
+}
+.about-cont{
+    padding-bottom: 18px;
+    margin-left: 40px;
+    margin-right: 45px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.about-cont .cont-left{
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background-color: #686868;
+    background: url(../../public/images/imoge.gif) no-repeat center/cover;
+}
+.about-cont .cont-right{
+    width: 237px;
+    text-align: right;
+    font-size: 2rem;
+}
+/* etc 그외파트 */
+.etc{
+    width: 406px;
+    margin: 0 auto;
+}
+.sub-tit{
+    font-size: 2rem;
+    padding: 11px 0;
+    text-align: center;
+    border-top: 1px dotted #000;
+    border-bottom: 1px dotted #000;
+    font-weight: 500;
+}
+.sub-cont{
+    padding-top: 11px;
+    font-size: 1.8rem;
+}
+/* 그외파트 내용 */
+.sub-cont li{
+    margin-bottom: 11px;
+    font-weight: 400;
+    display: flex;
+    justify-content: space-between;
+}
+.sub-cont strong{
+    font-weight: normal;
+}
+.sub-cont li span{
+    display: block;
+    width: 235px;
+    text-align: right;
+    line-height: 1.5;
+}
+.barcord{
+    margin: 22px 54px 14px 44px;
+    border-top: 1px dotted #000;
+}
+figure{
+    margin-top: 14px;
+    margin-bottom: 15px;
+    width: 100%;
+    height: 56px;
+}
+figure img{
+    width: 100%;
+    object-fit: contain;
+}
+figcaption{
+    margin-top: 19px;
+    font-size: 1.8rem;
+    word-break: break-all;
+    padding-bottom: 14px;
+}
+button.link-btn{
+    width: 500px;
+    height: 50px;
+    margin-top: 16px;
+    margin-bottom: 15px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ff7144;
+    border-radius: 10px;
+    box-shadow: 0 3px 3px #00000033;
+    color: #fff;
+    font-weight: 700;
+    font-size: 2.4rem;
+    text-align: center;
+    line-height: 50px;
+    border: none;
+    cursor: pointer;
+}

@@ -5,10 +5,10 @@ import { SiBuymeacoffee } from "react-icons/si";
 import '../data/itemData.json';
 
 export function Items() {
-    let dataPath = '/src/components/data/itemData.json';
+    let dataPath = 'https://github.com/itjuh/2024-FED-PORTFOLIO/blob/main/react-app/react-portfolio-app/src/components/data/itemData.json';
     async function dataLoad(dataPath){
         let waitFetch = await fetch(dataPath);
-        let waitLoad = await waitFetch;
+        let waitLoad = await waitFetch.json();
         console.log(waitLoad);
     }
     dataLoad(dataPath);

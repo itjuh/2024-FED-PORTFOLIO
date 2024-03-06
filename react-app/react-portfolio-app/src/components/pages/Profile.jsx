@@ -45,7 +45,7 @@ export function Profile() {
     });
 
     return (
-        <div className="">
+        <div className="info-page">
             <div className="receipt-tit">
                 <i>
                     <LiaReceiptSolid />
@@ -89,10 +89,10 @@ export function Profile() {
                 </div>
             </div>
             <div className="btn-box">
-                <button className="home-btn" onClick={() => nav("/main")}>
+                <button className="home-btn over-btn-l" onClick={() => nav("/main")}>
                     <FaHome />
                 </button>
-                <button className="link-btn" onClick={() => nav("/main?key=2")}>
+                <button className="link-btn over-btn-l" onClick={() => nav("/main?key=2")}>
                     포트폴리오 추가주문하기 &gt;&gt;
                 </button>
             </div>

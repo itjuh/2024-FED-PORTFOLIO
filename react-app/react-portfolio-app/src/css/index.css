@@ -10,9 +10,10 @@ ul, ol{
     margin: 0;
     list-style: none;
 }
-h1{
+h1, h2, dl, dt, dd{
     padding: 0;
     margin: 0;
+    font-weight: normal;
 }
 a{
     text-decoration: none;
@@ -80,4 +81,26 @@ figcaption,figure{
     font-optical-sizing: auto;
     font-weight: 500;
     src: url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap');
+}
+/* 공통 버튼효과 - dark */
+.over-btn{
+    background-position: 50% 50%;
+    background-size: 0% 0%;
+    background-repeat: no-repeat;
+    transition: background-size 0.5s cubic-bezier(0.67, 0.01, 0.15, 0.98);
+    background-image: radial-gradient(circle farthest-corner at center center, #00000033 0%, #00000033 50%, transparent 50.1%);
+}
+.over-btn:hover{
+    background-size: 200% 400%;
+}
+/* 공통 버튼효과 - ligth */
+.over-btn-l{
+    background-position: 50% 50%;
+    background-size: 0% 0%;
+    background-repeat: no-repeat;
+    transition: background-size 0.5s cubic-bezier(0.67, 0.01, 0.15, 0.98);
+    background-image: radial-gradient(circle farthest-corner at center center, #ffffff18 0%, #ffffff18 50%, transparent 50.1%);
+}
+.over-btn-l:hover{
+    background-size: 200% 400%;
 }

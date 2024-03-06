@@ -69,7 +69,7 @@ export default function MainArea({part}) {
                 </div>
                 <div className="info-view">
                     <RemainTime timeSts={endTime}/>
-                    <div className="del-btn" onClick={deleteSel}>삭제</div>
+                    <div className="del-btn over-btn" onClick={deleteSel}>삭제</div>
                     <div className="sel-count">
                         선택한상품 
                         {
@@ -82,7 +82,7 @@ export default function MainArea({part}) {
                         }
                         개
                     </div>
-                    <div className="order-btn" onClick={goLink}>주문하기</div>
+                    <div className="order-btn over-btn" onClick={goLink}>주문하기</div>
                 </div>
             </div>
         </div>

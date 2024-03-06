@@ -16,7 +16,7 @@
             "recommand":null,
             "color":"#48742c",
             "src":"<RiCake3Line />",
-            "link":"/portfolio"
+            "link":"/portfolio?group=0"
         },
         {
             "part":"포트폴리오",
@@ -25,7 +25,7 @@
             "recommand":null,
             "color":"#20b2aa",
             "src":"<LiaKeyboard />",
-            "link":"/portfolio"
+            "link":"/portfolio?group=1"
         },
         {
             "part":"포트폴리오",
@@ -34,7 +34,7 @@
             "recommand":null,
             "color":"#f29d38",
             "src":"<SiBuymeacoffee />",
-            "link":"/portfolio"
+            "link":"/portfolio?group=2"
         }
     ]
 }

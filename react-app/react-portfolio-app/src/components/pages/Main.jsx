@@ -9,7 +9,7 @@ export function Main() {
 
     // 소개에서 넘어온 경우
     if(window.location.href.indexOf('?')>0){
-        window.location.href = window.location.href.split('main')[0];
+        window.location.href = window.location.href.split('?')[0];
         chgPart('포트폴리오');
     }
     // 포폴사이트 우회로 넘어온 경우

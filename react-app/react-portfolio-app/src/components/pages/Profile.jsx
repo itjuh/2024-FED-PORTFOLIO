@@ -89,10 +89,10 @@ export function Profile() {
                 </div>
             </div>
             <div className="btn-box">
-                <button className="home-btn over-btn-l" onClick={() => nav("/main")}>
+                <button className="home-btn over-btn-l" onClick={() => nav("/")}>
                     <FaHome />
                 </button>
-                <button className="link-btn over-btn-l" onClick={() => nav("/main?key=2")}>
+                <button className="link-btn over-btn-l" onClick={() => nav("/?key=2")}>
                     포트폴리오 추가주문하기 &gt;&gt;
                 </button>
             </div>

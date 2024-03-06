@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/2024-FED-PORTFOLIO/react-app/pofol/static/css/main.2b231fa8.css",
-    "main.js": "/2024-FED-PORTFOLIO/react-app/pofol/static/js/main.5496a2ed.js",
+    "main.js": "/2024-FED-PORTFOLIO/react-app/pofol/static/js/main.c3b6026d.js",
     "static/media/imoge.gif": "/2024-FED-PORTFOLIO/react-app/pofol/static/media/imoge.29c5116d7d6504e60d25.gif",
     "static/media/Pretendard-ExtraBold.woff2": "/2024-FED-PORTFOLIO/react-app/pofol/static/media/Pretendard-ExtraBold.36145a15bedb632d6795.woff2",
     "static/media/Pretendard-SemiBold.woff2": "/2024-FED-PORTFOLIO/react-app/pofol/static/media/Pretendard-SemiBold.77dc78f65aa11d9abc37.woff2",
@@ -12,10 +12,10 @@
     "static/media/Nico-Moji.ttf.woff": "/2024-FED-PORTFOLIO/react-app/pofol/static/media/Nico-Moji.ttf.5814f6d04d13c07b7a3d.woff",
     "index.html": "/2024-FED-PORTFOLIO/react-app/pofol/index.html",
     "main.2b231fa8.css.map": "/2024-FED-PORTFOLIO/react-app/pofol/static/css/main.2b231fa8.css.map",
-    "main.5496a2ed.js.map": "/2024-FED-PORTFOLIO/react-app/pofol/static/js/main.5496a2ed.js.map"
+    "main.c3b6026d.js.map": "/2024-FED-PORTFOLIO/react-app/pofol/static/js/main.c3b6026d.js.map"
   },
   "entrypoints": [
     "static/css/main.2b231fa8.css",
-    "static/js/main.5496a2ed.js"
+    "static/js/main.c3b6026d.js"
   ]
 }

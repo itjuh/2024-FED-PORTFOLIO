@@ -4,8 +4,9 @@ import { useEffect, useState } from "react";
 import { RemainTime } from "../modules/RemainTime";
 import { useNavigate } from "react-router-dom";
 
-export default function MainArea() {
-    console.log('main호출');
+export default function MainArea({part}) {
+    // props down으로 part를 받음
+    
     // 선택메뉴[tit,link]
     const [sel, setSel] = useState(null);
     // 시간종료
@@ -44,7 +45,7 @@ export default function MainArea() {
         <div className="main">
             <div className="items-area">
                 <ul>
-                    <Items selectedMenu={selectedMenu}/>
+                    <Items part={part} selectedMenu={selectedMenu}/>
                 </ul>
             </div>
             <div className="view-area">

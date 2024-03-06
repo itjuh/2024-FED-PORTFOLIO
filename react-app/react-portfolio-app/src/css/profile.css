@@ -116,22 +116,32 @@ figcaption{
     word-break: break-all;
     padding-bottom: 14px;
 }
-button.link-btn{
-    width: 500px;
-    height: 50px;
+.btn-box{
+    display: flex;
     margin-top: 16px;
     margin-bottom: 15px;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
+    gap: 23px;
+    justify-content: center;
+}
+.btn-box button{
+    height: 50px;
     background-color: #ff7144;
     border-radius: 10px;
     box-shadow: 0 3px 3px #00000033;
     color: #fff;
     font-weight: 700;
-    font-size: 2.4rem;
     text-align: center;
     line-height: 50px;
     border: none;
     cursor: pointer;
+}
+button.home-btn{
+    width: 74px;
+    font-size: 3.6rem;
+    line-height: 58px;
+}
+button.link-btn{
+    width: 403px;
+    font-size: 2.4rem;
+    line-height: 50px;
 }

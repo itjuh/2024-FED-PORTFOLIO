@@ -3,6 +3,7 @@ import "../../css/profile.css";
 import { useEffect, useLayoutEffect } from "react";
 import { infoData, detailData, txtMsg, etcLinkData } from "../data/infoData.js";
 import { useNavigate } from "react-router-dom";
+import { FaHome } from "react-icons/fa";
 
 export function Profile() {
     // 데이터 가져오기
@@ -18,14 +19,16 @@ export function Profile() {
         frame.style.height = "auto";
         frame.style.borderRadius = "0px 0px 20px 20px";
         frame.style.marginTop = "0px";
-        document.querySelector('.receipt-area').style.transform = 'translateY(-101%)';
+        document.querySelector(".receipt-area").style.transform = "translateY(-101%)";
 
-        const linkLi = document.querySelectorAll('.link li span');
+        const linkLi = document.querySelectorAll(".link li span");
         // etcLinkData
-        linkLi.forEach((ele,idx)=>{
-            ele.style.cursor = 'pointer';
-            ele.addEventListener('click', ()=>{window.open(etcLinkData[idx],"_blank")});
-        })
+        linkLi.forEach((ele, idx) => {
+            ele.style.cursor = "pointer";
+            ele.addEventListener("click", () => {
+                window.open(etcLinkData[idx], "_blank");
+            });
+        });
     }, []);
 
     function whiteSpace(str) {
@@ -35,10 +38,10 @@ export function Profile() {
             return <span>{str}</span>;
         }
     }
-    useEffect(()=>{
-        setTimeout(()=>{
-            document.querySelector('.receipt-area').style.transform = 'translateY(0%)';
-        },500);
+    useEffect(() => {
+        setTimeout(() => {
+            document.querySelector(".receipt-area").style.transform = "translateY(0%)";
+        }, 500);
     });
 
     return (
@@ -64,16 +67,14 @@ export function Profile() {
                     </div>
                 </div>
                 {dataList.map((v, i) => (
-                    <div className={"etc "+ Object.keys(infoData)[i + 1].toLowerCase()} key={i + 1} >
+                    <div className={"etc " + Object.keys(infoData)[i + 1].toLowerCase()} key={i + 1}>
                         <div className="sub-tit">{Object.keys(infoData)[i + 1].toUpperCase()}</div>
                         <div className="sub-cont">
                             <ul>
                                 {v.map((ele, idx) => (
                                     <li key={idx}>
                                         <strong>{ele}</strong>
-                                        <i>
-                                        {whiteSpace(detailData[ele])}
-                                        </i>
+                                        <i>{whiteSpace(detailData[ele])}</i>
                                     </li>
                                 ))}
                             </ul>
@@ -84,14 +85,17 @@ export function Profile() {
                     <figure>
                         <img src="./images/barcord.png" alt="바코드이미지" />
                     </figure>
-                    <figcaption>
-                        {txtMsg}
-                    </figcaption>
+                    <figcaption>{txtMsg}</figcaption>
                 </div>
             </div>
-            <button className="link-btn" onClick={()=>nav('/portfolio')}>
-                포트폴리오 추가주문하기 &gt;&gt;
-            </button>
+            <div className="btn-box">
+                <button className="home-btn" onClick={() => nav("/main")}>
+                    <FaHome />
+                </button>
+                <button className="link-btn" onClick={() => nav("/main?key=2")}>
+                    포트폴리오 추가주문하기 &gt;&gt;
+                </button>
+            </div>
         </div>
     );
 }

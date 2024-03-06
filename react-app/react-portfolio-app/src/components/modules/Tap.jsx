@@ -1,9 +1,10 @@
-export function Tap({ txt }) {
+export function Tap({ txt, part }) {
+    // txt - 전체 탭배열 part - 현재 탭
     if (Array.isArray(txt)) {
-        return txt.map((v, i) => 
-            i==0
-            ?<li className='on' key={i}><a href="#">{v}</a></li>
-            :<li key={i}><a href='#'>{v}</a></li>
-        );
+        return txt.map((v, i) => (
+            <li key={i} className={part == v ? "on" : ""}>
+                <a href="#">{v}</a>
+            </li>
+        ));
     }
 }

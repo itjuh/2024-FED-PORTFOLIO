@@ -9,6 +9,7 @@
 /* 상단 메뉴 아이템 */
 .items-area{
     margin: 42px 45px 48px 46px;
+    min-height: 334px;
 }
 .items-area ul{
     display: flex;

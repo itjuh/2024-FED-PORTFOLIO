@@ -1,7 +1,8 @@
 {
     "items":[
         {
-            "part":"main",
+            "part":"메인상품",
+            "enPart":"main",
             "title":"안주현소개",
             "recommand":2,
             "color":"#ff7171",
@@ -9,7 +10,8 @@
             "link":"/profile"
         },
         {
-            "part":"portfolio",
+            "part":"포트폴리오",
+            "enPart":"portfolio",
             "title":"온고롱케이크",
             "recommand":null,
             "color":"#48742c",
@@ -17,7 +19,8 @@
             "link":"/portfolio"
         },
         {
-            "part":"portfolio",
+            "part":"포트폴리오",
+            "enPart":"portfolio",
             "title":"레오폴드키보드",
             "recommand":null,
             "color":"#20b2aa",
@@ -25,7 +28,8 @@
             "link":"/portfolio"
         },
         {
-            "part":"portfolio",
+            "part":"포트폴리오",
+            "enPart":"portfolio",
             "title":"더진한베이스",
             "recommand":null,
             "color":"#f29d38",

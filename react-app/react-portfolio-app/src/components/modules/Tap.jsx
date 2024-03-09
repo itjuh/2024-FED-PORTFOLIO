@@ -3,7 +3,7 @@ export function Tap({ txt, part }) {
     if (Array.isArray(txt)) {
         return txt.map((v, i) => (
             <li key={i} className={part == v ? "on" : ""}>
-                <a href="#">{v}</a>
+                <button>{v}</button>
             </li>
         ));
     }

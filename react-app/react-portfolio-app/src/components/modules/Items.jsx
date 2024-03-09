@@ -7,6 +7,17 @@ import "../data/itemData.json";
 export function Items({selectedMenu, part}) {
     // selectedMenu - 메뉴선택 저장 useState
     // part 선택그룹 이름
+
+    // let goods;
+    // fetch("./data/itemData.json", {
+    //     headers: {
+    //         Accept: "application / json",
+    //       },
+    //       method: "GET",
+    //     })
+    //   .then(res => res.json())
+    //   .then(data => {goods = data['items'];});
+
     let goods = require('../data/itemData.json');
     goods = goods['items'];
     console.log(part,part !== "추천메뉴");

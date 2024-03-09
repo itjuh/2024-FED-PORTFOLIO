@@ -2,7 +2,7 @@ import { LiaReceiptSolid } from "react-icons/lia";
 import "../../css/profile.css";
 import { useEffect, useLayoutEffect } from "react";
 import { infoData, detailData, txtMsg, etcLinkData } from "../data/infoData.js";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { FaHome } from "react-icons/fa";
 
 export function Profile() {
@@ -11,32 +11,24 @@ export function Profile() {
     const dataList = Object.values(infoData);
     dataList.shift();
 
-    // 페이지 이동
-    const nav = useNavigate();
-
     useLayoutEffect(() => {
         const frame = document.querySelector(".frame-box");
         frame.style.height = "auto";
         frame.style.borderRadius = "0px 0px 20px 20px";
         frame.style.marginTop = "0px";
         document.querySelector(".receipt-area").style.transform = "translateY(-101%)";
-
-        const linkLi = document.querySelectorAll(".link li span");
-        // etcLinkData
-        linkLi.forEach((ele, idx) => {
-            ele.style.cursor = "pointer";
-            ele.addEventListener("click", () => {
-                window.open(etcLinkData[idx], "_blank");
-            });
-        });
     }, []);
 
-    function whiteSpace(str) {
+    function splitTitleCont(str) {
         if (str.indexOf("^") > 0) {
             return str.split("^").map((item) => <span key={item}>{item}</span>);
         } else {
             return <span>{str}</span>;
         }
+    }
+    function makeLink(ele,idx){
+        return <Link to={etcLinkData[idx]} target='_blank' title={ele+" 이동하기"}>{detailData[ele]}</Link>;
+
     }
     useEffect(() => {
         setTimeout(() => {
@@ -71,10 +63,18 @@ export function Profile() {
                         <div className="sub-tit">{Object.keys(infoData)[i + 1].toUpperCase()}</div>
                         <div className="sub-cont">
                             <ul>
-                                {v.map((ele, idx) => (
+                                {i === 0 &&
+                                v.map((ele, idx) => (
                                     <li key={idx}>
                                         <strong>{ele}</strong>
-                                        <i>{whiteSpace(detailData[ele])}</i>
+                                        <i>{makeLink(ele,idx)}</i>
+                                    </li>
+                                ))}
+                                {i !== 0 &&
+                                v.map((ele, idx) => (
+                                    <li key={idx}>
+                                        <strong>{ele}</strong>
+                                        <i>{splitTitleCont(detailData[ele])}</i>
                                     </li>
                                 ))}
                             </ul>
@@ -89,12 +89,12 @@ export function Profile() {
                 </div>
             </div>
             <div className="btn-box">
-                <button className="home-btn over-btn-l" onClick={() => nav("/")}>
+                <Link to="/" className="home-btn over-btn-l" title="홈으로 이동">
                     <FaHome />
-                </button>
-                <button className="link-btn over-btn-l" onClick={() => nav("/?key=2")}>
+                </Link>
+                <Link to="/?key=2" className="link-btn over-btn-l">
                     포트폴리오 추가주문하기 &gt;&gt;
-                </button>
+                </Link>
             </div>
         </div>
     );

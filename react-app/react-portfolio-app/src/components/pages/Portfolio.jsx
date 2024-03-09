@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import "../../css/portfolio.css";
 import { siteData } from "../data/infoData.js";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 export function Portfolio() {
     const nav = useLocation();
@@ -86,7 +86,7 @@ export function Portfolio() {
             <div className="pop-box">
                 <div className="pop-tit">
                     <span>주문메뉴</span>
-                    <button onClick={() => window.history.back()}>×</button>
+                    <Link to="/" title="이전페이지 이동">×</Link>
                 </div>
                 <div className="tit-img" style={{ backgroundImage: "url(" + selData.imgsrc + ")" }}>
                     <div className="main-tit">{selData.tit}</div>
@@ -112,13 +112,13 @@ export function Portfolio() {
                     </ol>
                 </div>
                 <div className="site-link-btn">
-                    <button className="site-link over-btn" onClick={() => window.open(selData.link1)}>
+                    <Link to={selData.link1} target="_blank" className="site-link over-btn" title="새창열기">
                         사이트 이동
-                    </button>
+                    </Link>
                     {selData.link2 && (
-                        <button className="guide-link over-btn" onClick={() => window.open(selData.link2)}>
+                        <Link to={selData.link2} target="_blank" className="guide-link over-btn" title="새창열기">
                             가이드 문서
-                        </button>
+                        </Link>
                     )}
                 </div>
             </div>

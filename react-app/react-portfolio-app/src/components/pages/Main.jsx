@@ -30,9 +30,9 @@ export function Main() {
     },[]);
 
     return (
-        <div>
+        <>
             <TopArea chgPart={chgPart} part={part}/>
             <MainArea part={part}/>
-        </div>
+        </>
     );
 }

@@ -148,3 +148,7 @@
 .guide-link{
     background-color: #afafaf;
 }
+@media screen and (max-width: 750px) {
+}
+@media screen and (max-width: 600px) {
+}

@@ -1,4 +1,4 @@
-.main{
+.main {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -10,18 +10,19 @@
     gap: 2rem;
 }
 /* 상단 메뉴 아이템 */
-.items-area{
+.items-area {
     margin-top: 4rem;
 }
-.items-area ul{
+.items-area ul {
     width: 508px;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     gap: 4rem;
+    justify-content: space-around;
 }
 /* 메뉴아이템 unit */
-.lnb-unit{
+.lnb-unit {
     flex-shrink: 0;
     width: 236px;
     height: 146px;
@@ -35,35 +36,36 @@
     cursor: pointer;
 }
 /* 메뉴 아이템 마우스 오버 */
-.lnb-unit:hover{
+.lnb-unit:hover {
     box-shadow: 0 3px 3px #00000054;
 }
 /* unit 구분 */
-.lnb-part{
+.lnb-part {
     font-size: 1.6rem;
 }
 /* unit 아이콘 */
-.lnb-icon{
+.lnb-icon {
     font-size: 80px;
     line-height: 70px;
     text-align: center;
 }
 /* 메뉴 아이템 마우스 오버 */
-.lnb-unit:hover .lnb-icon{
-    animation: swing-ani .3s linear infinite;
+.lnb-unit:hover .lnb-icon {
+    animation: swing-ani 0.3s linear infinite;
 }
 @keyframes swing-ani {
-    25%{
+    25% {
         transform: rotate(-5deg);
-    }75%{
+    }
+    75% {
         transform: rotate(5deg);
     }
 }
 /* unit 이름 */
-.lnb-tit{
+.lnb-tit {
     text-align: center;
 }
-.lnb-tit span:first-child{
+.lnb-tit span:first-child {
     position: relative;
     font-size: 2.4rem;
     font-weight: 600;
@@ -72,20 +74,20 @@
     background-repeat: no-repeat;
     background-size: 0% 30%;
     background-position: bottom left;
-    transition: .3s ease-in-out;
+    transition: 0.3s ease-in-out;
 }
 
 /* 메뉴 아이템 마우스 오버 */
-.lnb-unit:hover .lnb-tit span:first-child{
+.lnb-unit:hover .lnb-tit span:first-child {
     background-size: 100% 30%;
 }
 /* unit 별표 */
-.lnb-tit span+span{
+.lnb-tit span + span {
     position: absolute;
 }
 
 /* 하단 보여주기창 */
-.view-area{
+.view-area {
     display: flex;
     width: 508px;
     margin: 0 auto;
@@ -93,7 +95,7 @@
     font-weight: 400;
     margin-bottom: 2rem;
 }
-.selected-view{
+.selected-view {
     position: relative;
     width: 310px;
     height: 194px;
@@ -105,7 +107,7 @@
     font-weight: 500;
 }
 /* 선택상품 없는 경우 */
-.sel-null{
+.sel-null {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
@@ -115,10 +117,10 @@
     line-height: 1.5;
 }
 /* 선택상품 있는 경우 */
-.sel-cnt{
+.sel-cnt {
     float: right;
 }
-.alert-box{
+.alert-box {
     position: absolute;
     width: 100%;
     height: 73px;
@@ -132,7 +134,7 @@
     line-height: 1.3;
 }
 /* 하단 정보와 버튼 */
-.info-view{
+.info-view {
     margin-left: 16px;
     width: 183px;
     height: 194px;
@@ -141,7 +143,7 @@
     justify-content: space-between;
 }
 /* 남은시간 */
-.timer{
+.timer {
     width: 89px;
     height: 66px;
     font-size: 2.4rem;
@@ -151,12 +153,12 @@
     line-height: 1.4;
 }
 /* 남은시간 숫자 */
-.timer em{
+.timer em {
     color: #ff7144;
     font-weight: 700;
 }
 /* 삭제버튼 */
-.del-btn{
+.del-btn {
     width: 78px;
     height: 59px;
     border-radius: 10px;
@@ -170,7 +172,7 @@
     cursor: pointer;
 }
 /* 선택상품 */
-.sel-count{
+.sel-count {
     width: 183px;
     height: 50px;
     border-radius: 10px;
@@ -184,7 +186,7 @@
     margin-top: 13px;
 }
 /* 주문버튼 */
-.order-btn{
+.order-btn {
     width: 183px;
     height: 50px;
     border-radius: 10px;
@@ -197,4 +199,77 @@
     line-height: 50px;
     margin-top: 15px;
     cursor: pointer;
+}
+
+@media screen and (max-width: 750px) {
+}
+@media screen and (max-width: 600px) {
+    .main {
+        width: 100%;
+    }
+    /* 상단 메뉴 아이템 */
+    .items-area {
+        margin-top: 3rem;
+    }
+    .items-area ul {
+        width: 90%;
+        gap: 3rem;
+    }
+    /* 메뉴아이템 unit */
+    .lnb-unit {
+        max-width: 236px;
+        width: 45%;
+        height: auto;
+        padding: 8px;
+    }
+    /* unit 아이콘 */
+    .lnb-icon {
+        font-size: 70px;
+    }
+    .lnb-tit span:first-child {
+        font-size: 2rem;
+    }
+    /* 하단 보여주기창 */
+    .view-area {
+        width: 90%;
+        gap: 2rem;
+    }
+}
+@media screen and (max-width: 500px) {
+    /* 하단 정보와 버튼 */
+    .info-view {
+        margin-left: 0;
+        width: 44%;
+        margin-left: 0;
+        justify-content: space-between;
+    }
+    .selected-view {
+        font-size: 1.6rem;
+    }
+    /* 선택상품 없는 경우 */
+    .sel-null {
+        font-size: 1.8rem;
+    }
+    /* 선택상품 있는 경우 */
+    .alert-box {
+        height: 90px;
+    }
+    /* 남은시간 */
+    .timer {
+        width: 70px;
+        height: 49px;
+        font-size: 2rem;
+        line-height: 1.4;
+    }
+    /* 삭제버튼 */
+    .del-btn {
+        width: 55px;
+        height: 49px;
+        font-size: 1.8rem;
+        line-height: 49px;
+    }
+    /* 주문버튼 */
+    .order-btn {
+        font-size: 2.2rem;
+    }
 }

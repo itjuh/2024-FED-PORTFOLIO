@@ -1,4 +1,4 @@
-.frame-box{
+.frame-box {
     position: absolute;
     display: flex;
     justify-content: end;
@@ -10,15 +10,16 @@
     background-color: #dfdfdf;
     border-radius: 20px 20px 0px 0px;
 }
-.header{
+.header {
+    display: flex;
+    flex-direction: column;
     position: relative;
     width: 600px;
-    height: 150px;
     margin: 0 auto;
     background-color: #ff7144;
 }
 /* 상단 gnb */
-nav.gnb{
+nav.gnb {
     height: 100px;
     display: flex;
     color: #fff;
@@ -26,10 +27,10 @@ nav.gnb{
     align-items: center;
 }
 /* 상단 아이콘 */
-.gnb .home{
+.gnb .home {
     font-size: 4rem;
 }
-.gnb .more{
+.gnb .more {
     width: 30px;
     height: 30px;
     background-color: #fff;
@@ -40,25 +41,25 @@ nav.gnb{
     text-align: center;
     cursor: pointer;
 }
-.gnb h1{
+.gnb h1 {
     font-size: 2.4rem;
     font-family: Nico;
     font-weight: 300;
     letter-spacing: 3px;
 }
 /* 하단 lnb */
-.lnb ol{
+.lnb ol {
     height: 50px;
     display: flex;
     justify-content: space-around;
     align-items: end;
 }
-.lnb li{
+.lnb li {
     flex: 1;
     cursor: pointer;
     text-align: center;
 }
-.lnb li button{
+.lnb li button {
     font-family: Pretendard;
     font-weight: 400;
     padding: 7px 0 11px;
@@ -71,19 +72,51 @@ nav.gnb{
     background-color: transparent;
     cursor: pointer;
 }
-.lnb li.on{
+.lnb li.on {
     background-color: #e9e9e9;
     border-radius: 10px 10px 0 0;
     margin: 0 11px;
 }
-.lnb li.on button{
+.lnb li.on button {
     color: #000;
     font-weight: 500;
 }
 
-@media screen and (max-width:750px){
-
-    .frame-box{
+@media screen and (max-width: 750px) {
+    .frame-box {
+        width: 100%;
         left: 0;
+    }
+}
+@media screen and (max-width: 600px) {
+    .header {
+        width: 100%;
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+    /* 상단 gnb */
+    nav.gnb {
+        height: 80px;
+    }
+    /* 상단 아이콘 */
+    .gnb .home {
+        font-size: 3rem;
+    }
+    .gnb .more {
+        width: 25px;
+        height: 25px;
+        font-size: 3rem;
+        line-height: 20px;
+    }
+    .gnb h1 {
+        font-size: 2rem;
+    }
+    /* 하단 lnb */
+    .lnb li button {
+        letter-spacing: 2px;
+        font-size: 2rem;
+    }
+    .lnb li.on {
+        margin: 0;
     }
 }

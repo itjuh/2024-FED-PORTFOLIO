@@ -1,22 +1,24 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
+import { timeStore } from "../../stores/store";
 
-export function RemainTime({timeSts}) {
+export function RemainTime() {
     // 남은시간
-    const [remainT, setRemainT] = useState(20);
+    const { remainTime , decreaseRemainTime, timeEnd, timePause} = timeStore(state => state);
 
     useEffect(()=>{
-        const autoI = setInterval(()=>{
-            setRemainT((remainT)=>remainT - 1);
-        },1000);
-        if(remainT == 0){
+        const autoI = setInterval(decreaseRemainTime,1000);
+        if(remainTime == 0){
             clearInterval(autoI);
-            timeSts();
+            timeEnd();
+        }
+        if(timePause){
+            clearInterval(autoI);
         }
         return ()=> clearInterval(autoI);
-    },[remainT]);
+    },[remainTime, timePause]);
     return (
         <div className="timer">
-            남은시간<em>{remainT}</em>
+            남은시간<em>{remainTime}</em>
             <span>초</span>
         </div>
     );

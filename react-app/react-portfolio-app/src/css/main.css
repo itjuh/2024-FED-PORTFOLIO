@@ -157,31 +157,29 @@
     color: #ff7144;
     font-weight: 700;
 }
-/* 삭제버튼 */
-.del-btn {
-    width: 78px;
-    height: 59px;
+.main-btn {
     border-radius: 10px;
-    background-color: #afafaf;
     box-shadow: 0 2px 3px #00000033;
-    color: #fff;
+    text-align: center;
+    cursor: pointer;
     font-size: 2.4rem;
     font-weight: 700;
-    text-align: center;
-    line-height: 59px;
-    cursor: pointer;
 }
-/* 선택상품 */
-.sel-count {
+/* 멈춤버튼 */
+/* 플레이버튼 */
+.pause-btn {
+    width: 60px;
+    height: 59px;
+    background-color: cornflowerblue;
+    color: #fff;
+    line-height: 59px;
+}
+/* 삭제버튼 */
+.del-btn {
     width: 183px;
     height: 50px;
-    border-radius: 10px;
-    background-color: #fff;
-    box-shadow: 0 2px 3px #00000033;
-    font-size: 2rem;
-    font-weight: 500;
-    text-align: center;
-    letter-spacing: 1px;
+    background-color: #afafaf;
+    color: #fff;
     line-height: 50px;
     margin-top: 13px;
 }
@@ -189,16 +187,10 @@
 .order-btn {
     width: 183px;
     height: 50px;
-    border-radius: 10px;
     background-color: #666;
-    box-shadow: 0 2px 3px #00000033;
     color: #fff;
-    font-size: 2.4rem;
-    font-weight: 700;
-    text-align: center;
     line-height: 50px;
     margin-top: 15px;
-    cursor: pointer;
 }
 
 @media screen and (max-width: 750px) {

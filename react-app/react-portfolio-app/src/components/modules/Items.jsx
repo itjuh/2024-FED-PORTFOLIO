@@ -3,8 +3,9 @@ import { RiCake3Line } from "react-icons/ri";
 import { LiaKeyboard } from "react-icons/lia";
 import { SiBuymeacoffee } from "react-icons/si";
 import "../data/itemData.json";
+import { menuStore } from "../../stores/store";
 
-export function Items({selectedMenu, part}) {
+export function Items({part}) {
     // selectedMenu - 메뉴선택 저장 useState
     // part 선택그룹 이름
 
@@ -34,13 +35,10 @@ export function Items({selectedMenu, part}) {
         "<LiaKeyboard />": <LiaKeyboard />,
         "<SiBuymeacoffee />": <SiBuymeacoffee />
     }
-    // click메뉴 tit,link
-    const clickMenu = (arr) => {
-        selectedMenu(arr);
-    }
+    const { pickMenu } = menuStore((state) => state);
 
     return goods.map((v, i) => (
-        <li className="lnb-unit" key={i} onClick={()=>clickMenu([v.title,v.link])}>
+        <li className="lnb-unit" key={i} onClick={()=>pickMenu([v.title,v.link])}>
             <div className="lnb-part">{v.enPart}</div>
             <div className="lnb-icon" style={{color:v.color}}>
                 {iconMap[v.src]}

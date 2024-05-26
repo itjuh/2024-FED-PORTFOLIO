@@ -19,7 +19,6 @@
     display: flex;
     flex-wrap: wrap;
     gap: 4rem;
-    justify-content: space-around;
 }
 /* 메뉴아이템 unit */
 .lnb-unit {
@@ -28,16 +27,16 @@
     height: 146px;
     border-radius: 10px;
     background-color: #fff;
-    box-shadow: 0 3px 3px #00000033;
+    box-shadow: var(--shadow);
     padding: 8px 13px 13px 6px;
     box-sizing: border-box;
     font-family: Pretendard;
     font-weight: 400;
-    cursor: pointer;
+    cursor: var(--pointer);
 }
 /* 메뉴 아이템 마우스 오버 */
 .lnb-unit:hover {
-    box-shadow: 0 3px 3px #00000054;
+    box-shadow: var(--shadow-more);
 }
 /* unit 구분 */
 .lnb-part {
@@ -161,7 +160,7 @@
     border-radius: 10px;
     box-shadow: 0 2px 3px #00000033;
     text-align: center;
-    cursor: pointer;
+    cursor: var(--pointer);
     font-size: 2.4rem;
     font-weight: 700;
 }
@@ -172,7 +171,7 @@
     height: 59px;
     background-color: cornflowerblue;
     color: #fff;
-    line-height: 59px;
+    line-height: 62px;
 }
 /* 삭제버튼 */
 .del-btn {
@@ -197,7 +196,7 @@
 }
 @media screen and (max-width: 600px) {
     .main {
-        width: 100%;
+        width: 95%;
     }
     /* 상단 메뉴 아이템 */
     .items-area {

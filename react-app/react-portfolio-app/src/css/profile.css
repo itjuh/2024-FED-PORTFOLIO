@@ -32,7 +32,7 @@
     margin: 0 auto;
     margin-top: 15px;
     background-color: #fff;
-    box-shadow: 0 3px 3px #00000033;
+    box-shadow: var(--shadow);
     /* transform: translateY(-101%); */
     transition: transform 3s linear .3s;
 }
@@ -127,12 +127,12 @@ figcaption{
     height: 50px;
     background-color: #ff7144;
     border-radius: 10px;
-    box-shadow: 0 3px 3px #00000033;
+    box-shadow: var(--shadow);
     color: #fff;
     font-weight: 700;
     text-align: center;
     line-height: 50px;
-    cursor: pointer;
+    cursor: var(--pointer);
 }
 a.home-btn{
     width: 74px;

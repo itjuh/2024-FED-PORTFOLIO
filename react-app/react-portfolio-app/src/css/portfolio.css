@@ -5,7 +5,7 @@
     margin-top: 101px;
     border-radius: 10px;
     background-color: #fff;
-    box-shadow: 0px 3px 3px #00000030;
+    box-shadow: var(--shadow);
     overflow-x: hidden;
 }
 .pop-tit{
@@ -32,7 +32,7 @@
     color: #ff7144;
     font-size: 4rem;
     background-color: transparent;
-    cursor: pointer;
+    cursor: var(--pointer);
     transform: rotate(0deg);
     transition: transform .3s ease-out;
 }
@@ -138,8 +138,8 @@
     color: #fff;
     text-align: center;
     border-radius: 10px;
-    box-shadow: 0px 3px 3px #00000030;
-    cursor: pointer;
+    box-shadow: var(--shadow);
+    cursor: var(--pointer);
 }
 .site-link{
     background-color: #666;

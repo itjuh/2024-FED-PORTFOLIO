@@ -3,12 +3,14 @@
     display: flex;
     justify-content: end;
     flex-direction: column;
-    width: 750px;
-    height: calc(100vh - 25px);
-    left: calc(50% - 375px);
+    padding: 50px 30px 0px;
+    left: calc(50%);
+    transform: translateX(-50%);
     margin-top: 25px;
-    background-color: #dfdfdf;
-    border-radius: 20px 20px 0px 0px;
+    background-color: var(--black);
+    border-radius: 10px 10px 0px 0px;
+    border: var(--stroke-bold);
+    box-shadow: var(--shadow-more);
 }
 .header {
     display: flex;
@@ -16,6 +18,7 @@
     position: relative;
     width: 600px;
     margin: 0 auto;
+    border-radius: 10px 10px 0px 0px;
     background-color: #ff7144;
 }
 /* 상단 gnb */
@@ -39,7 +42,7 @@ nav.gnb {
     font-size: 4rem;
     line-height: 24px;
     text-align: center;
-    cursor: pointer;
+    cursor: var(--pointer);
 }
 .gnb h1 {
     font-size: 2.4rem;
@@ -56,8 +59,9 @@ nav.gnb {
 }
 .lnb li {
     flex: 1;
-    cursor: pointer;
-    text-align: center;
+    cursor: var(--pointer);
+    text-align: ce
+    nter;
 }
 .lnb li button {
     font-family: Pretendard;
@@ -70,7 +74,7 @@ nav.gnb {
     height: 100%;
     border: none;
     background-color: transparent;
-    cursor: pointer;
+    cursor: var(--pointer);
 }
 .lnb li.on {
     background-color: #e9e9e9;
@@ -82,15 +86,14 @@ nav.gnb {
     font-weight: 500;
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 660px) {
     .frame-box {
         width: 100%;
-        left: 0;
     }
 }
 @media screen and (max-width: 600px) {
     .header {
-        width: 100%;
+        width: 95%;
         padding: 0 10px;
         box-sizing: border-box;
     }

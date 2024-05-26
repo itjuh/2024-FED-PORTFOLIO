@@ -4,16 +4,14 @@ import { useEffect } from "react";
 import { RemainTime } from "../modules/RemainTime";
 import { useNavigate } from "react-router-dom";
 import { menuStore, timeStore } from "../../stores/store";
+import { FaPause, FaPlay } from "react-icons/fa";
 
-export default function MainArea({ part }) {
-  // props down으로 part를 받음
-
+export default function MainArea() {
   // 선택메뉴[tit,link]
   const { pickedMenu, resetMenu } = menuStore((state) => state);
   const { timeEndStatus, timeStopGo, timePause } = timeStore((state) => state);
   // 페이지 이동
   const nav = useNavigate();
-
   useEffect(() => {
     if (timeEndStatus) {
       if (pickedMenu) {
@@ -22,7 +20,7 @@ export default function MainArea({ part }) {
         nav("profile");
       }
     }
-  }, [timeEndStatus]);
+  }, [timeEndStatus,pickedMenu]);
 
   function goLink() {
     if (pickedMenu) {
@@ -33,7 +31,7 @@ export default function MainArea({ part }) {
     <div className="main">
       <div className="items-area">
         <ul>
-          <Items part={part} />
+          <Items/>
         </ul>
       </div>
       <div className="view-area">
@@ -60,11 +58,11 @@ export default function MainArea({ part }) {
           <button className="main-btn pause-btn" onClick={timeStopGo}>
             {
                 timePause &&
-                <>▶</>
+                <FaPlay />
             }
             {
                 !timePause &&
-                <>∥</>
+                <FaPause />
             }
           </button>
           <div className="main-btn del-btn over-btn" onClick={resetMenu}>

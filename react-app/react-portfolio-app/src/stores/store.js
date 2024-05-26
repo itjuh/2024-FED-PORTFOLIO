@@ -11,9 +11,11 @@ const timeStore = create(set => ({
 }))
 
 const menuStore = create(set =>({
-    pickedMenu: null,
+    category: "추천메뉴",
+    pickedMenu: null, //[tit, link]형태
+    pickCategory: (name)=> set({category: name}),
     pickMenu: (menuName)=> set({pickedMenu: menuName}),
-    resetMenu: ()=> set({pickMenu: null})
+    resetMenu: ()=> set({pickedMenu: null})
 }))
 
 export {timeStore , menuStore}

@@ -1,4 +1,7 @@
-export function Tap({ part, chgPart }) {
+import { menuStore } from "../../stores/store";
+
+export function Tap() {
+    const {category, pickCategory} = menuStore(state=>state);
     // chgPart(탭변경) , part(선택 탭)
     let txt = ["추천메뉴", "메인상품", "포트폴리오"];
 
@@ -7,12 +10,12 @@ export function Tap({ part, chgPart }) {
         let selectedTap = e.target.parentNode;
         allTap.forEach(v=>v.classList.remove('on'));
         selectedTap.classList.add('on');
-        chgPart(e.target.innerText);
+        pickCategory(e.target.innerText);
     }
 
     if (Array.isArray(txt)) {
         return txt.map((v, i) => (
-            <li key={i} className={part == v ? "on" : ""}>
+            <li key={i} className={category == v ? "on" : ""}>
                 <button onClick={(e)=>{chgTap(e)}}>{v}</button>
             </li>
         ));

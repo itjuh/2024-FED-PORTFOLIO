@@ -2,8 +2,7 @@ import "../../css/toparea.css";
 import { Tap } from "../modules/Tap";
 import { FaHome } from "react-icons/fa";
 
-export default function TopArea({chgPart, part}) {
-
+export default function TopArea() {
     return (
         <div className="header">
             <nav className="gnb">
@@ -13,7 +12,7 @@ export default function TopArea({chgPart, part}) {
             </nav>
             <nav className="lnb">
                 <ol>
-                    <Tap part={part} chgPart={chgPart}/>
+                    <Tap />
                 </ol>
             </nav>
         </div>

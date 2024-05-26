@@ -12,11 +12,11 @@ export function Profile() {
     dataList.shift();
 
     useLayoutEffect(() => {
-        const frame = document.querySelector(".frame-box");
-        frame.style.height = "auto";
-        frame.style.borderRadius = "0px 0px 20px 20px";
-        frame.style.marginTop = "0px";
-        document.querySelector(".receipt-area").style.transform = "translateY(-101%)";
+        // const frame = document.querySelector(".frame-box");
+        // frame.style.height = "auto";
+        // frame.style.borderRadius = "0px 0px 4px 4px";
+        // frame.style.marginTop = "0px";
+        // document.querySelector(".receipt-area").style.transform = "translateY(-101%)";
     }, []);
 
     function splitTitleCont(str) {

@@ -1,15 +1,19 @@
 import { Items } from "../modules/Items";
 import "../../css/main.css";
-import { useEffect } from "react";
+import { useEffect, useLayoutEffect } from "react";
 import { RemainTime } from "../modules/RemainTime";
 import { useNavigate } from "react-router-dom";
 import { menuStore, timeStore } from "../../stores/store";
 import { FaPause, FaPlay } from "react-icons/fa";
 
 export default function MainArea() {
+  console.log("랜더링됨! main");
   // 선택메뉴[tit,link]
   const { pickedMenu, resetMenu } = menuStore((state) => state);
-  const { timeEndStatus, timeStopGo, timePause } = timeStore((state) => state);
+  // 리랜더링 방지를 위해 필요한 state만 가져옴
+  const timeEndStatus = timeStore((state) => state.timeEndStatus);
+  const timeStopGo = timeStore((state) => state.timeStopGo);
+  const timePause  = timeStore((state) => state.timePause);
   // 페이지 이동
   const nav = useNavigate();
   useEffect(() => {

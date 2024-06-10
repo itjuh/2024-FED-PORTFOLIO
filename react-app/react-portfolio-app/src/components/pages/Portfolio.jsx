@@ -1,5 +1,5 @@
-import { useEffect, useRef } from "react";
-import "../../css/portfolio.css";
+import { useEffect } from "react";
+// import "../../css/portfolio.css";
 import { siteData } from "../data/infoData.js";
 import { Link, useLocation } from "react-router-dom";
 

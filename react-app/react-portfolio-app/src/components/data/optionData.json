@@ -1,0 +1,134 @@
+[
+  {"itemName": "안주현소개", 
+    "mainTitle": "안주현 소개",
+    "subTitle": "새싹 개발자 안주현의^상세 소개서",
+    "src":"face",
+    "basic": {
+      "title": "기본정보 선택(필수, 1개 이상 선택)",
+      "option": [
+        { "icon": "personImg", "label": "사진" },
+        { "icon": "address", "label": "연락처" },
+        { "icon": "other", "label": "개인정보" },
+        { "icon": "point", "label": "MBTI" }
+      ]
+    },
+    "select": {
+      "title": "상세정보 선택(선택, 다중선택)",
+      "option": [
+        { "icon": "link", "label": "링크" },
+        { "icon": "skill", "label": "사용기술" },
+        { "icon": "edu", "label": "교육" },
+        { "icon": "career", "label": "사회경험" },
+        { "icon": "introduction", "label": "자기소개서" }
+      ]
+    }
+  },
+  {
+    "itemName": "온고롱케이크",
+    "mainTitle": "온고롱케이크",
+    "src":"./images/on_main.jpg",
+    "subTitle": "순수 자바스크립트로 개발 한^수제 케이크 사이트",
+    "basic": {
+      "title": "기본정보 선택(필수, 1개 이상 선택)",
+      "option": [
+        { "icon": "period", "label": "제작기간" },
+        { "icon": "percent", "label": "기여도" },
+        { "icon": "purpose", "label": "제작의도" }
+      ]
+    },
+    "select": {
+      "title": "상세정보 선택(선택, 다중선택)",
+      "option": [
+        { "icon": "link", "label": "링크" },
+        { "icon": "skill", "label": "사용기술" },
+        { "icon": "point", "label": "개발포인트" }
+      ]
+    }
+  },
+  {
+    "itemName": "레오폴드키보드",
+    "mainTitle": "레오폴드",
+    "src":"./images/leo_main.jpg",
+    "subTitle": "React로 제작한^키보드 소개&판매 웹페이지",
+    "basic": {
+      "title": "기본정보 선택(필수, 1개 이상 선택)",
+      "option": [
+        { "icon": "period", "label": "제작기간" },
+        { "icon": "percent", "label": "기여도" },
+        { "icon": "purpose", "label": "제작의도" }
+      ]
+    },
+    "select": {
+      "title": "상세정보 선택(선택, 다중선택)",
+      "option": [
+        { "icon": "link", "label": "링크" },
+        { "icon": "skill", "label": "사용기술" },
+        { "icon": "point", "label": "개발포인트" }
+      ]
+    }
+  },
+  {
+    "itemName": "더진한베이스",
+    "mainTitle": "더 진한",
+    "subTitle": "Vue로 제작한^더 진한 웹 페이지",
+    "src":"./images/the_main.jpg",
+    "basic": {
+      "title": "기본정보 선택(필수, 1개 이상 선택)",
+      "option": [
+        { "icon": "period", "label": "제작기간" },
+        { "icon": "percent", "label": "기여도" },
+        { "icon": "purpose", "label": "제작의도" }
+      ]
+    },
+    "select": {
+      "title": "상세정보 선택(선택, 다중선택)",
+      "option": [
+        { "icon": "link", "label": "링크" },
+        { "icon": "skill", "label": "사용기술" },
+        { "icon": "point", "label": "개발포인트" }
+      ]
+    }
+  },
+  {
+    "itemName": "포트폴리오V1",
+    "mainTitle": "포트폴리오 페이지",
+    "subTitle": "순수 자바스크립트를 사용 한^포트폴리오 페이지",
+    "basic": {
+      "title": "기본정보 선택(필수, 1개 이상 선택)",
+      "option": [
+        { "icon": "period", "label": "제작기간" },
+        { "icon": "percent", "label": "기여도" },
+        { "icon": "purpose", "label": "제작의도" }
+      ]
+    },
+    "select": {
+      "title": "상세정보 선택(선택, 다중선택)",
+      "option": [
+        { "icon": "link", "label": "링크" },
+        { "icon": "skill", "label": "사용기술" },
+        { "icon": "point", "label": "개발포인트" }
+      ]
+    }
+  },
+  {
+    "itemName": "포트폴리오V2",
+    "mainTitle": "포트폴리오 페이지",
+    "subTitle": "React로 제작한 반응형 포트폴리오 페이지",
+    "basic": {
+      "title": "기본정보 선택(필수, 1개 이상 선택)",
+      "option": [
+        { "icon": "period", "label": "제작기간" },
+        { "icon": "percent", "label": "기여도" },
+        { "icon": "purpose", "label": "제작의도" }
+      ]
+    },
+    "select": {
+      "title": "상세정보 선택(선택, 다중선택)",
+      "option": [
+        { "icon": "link", "label": "링크" },
+        { "icon": "skill", "label": "사용기술" },
+        { "icon": "point", "label": "개발포인트" }
+      ]
+    }
+  }
+]

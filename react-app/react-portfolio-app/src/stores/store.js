@@ -1,7 +1,7 @@
 import {create} from 'zustand';
 
 const timeStore = create(set => ({
-    remainTime: 50,
+    remainTime: 1000,
     timeEndStatus: false,
     timePause: false,
     decreaseRemainTime: ()=> set(state => ({remainTime: state.remainTime -1})),
@@ -18,4 +18,11 @@ const menuStore = create(set =>({
     resetMenu: ()=> set({pickedMenu: null})
 }))
 
-export {timeStore , menuStore}
+const popStore = create(set=>({
+    popName: null,
+    popStatus: false,
+    setPopName: (name) => set({popName: name}),
+    resetPopName: ()=>set({popName: null}),
+    popChg: ()=>set(state=>({popStatus:!state.popStatus})),
+}))
+export {timeStore , menuStore, popStore}

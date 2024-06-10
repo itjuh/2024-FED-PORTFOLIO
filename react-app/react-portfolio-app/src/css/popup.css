@@ -1,0 +1,70 @@
+@charset "uft-8";
+/* 팝업 뒷배경 */
+.popup-back {
+  display: none;
+  position: absolute;
+  background-color: #00000046;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  padding-top: 70px;
+  z-index: 999;
+  justify-content: center;
+  align-items: flex-start;
+}
+/* 팝업창 */
+.popup {
+  position: relative;
+  background-color: #fff;
+  padding: 10px 25px;
+  min-width: 350px;
+  min-height: 550px;
+  border-radius: 10px;
+  box-shadow: var(--shadow-more);
+}
+/* 팝업 타이틀 */
+.pop-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 2.4rem;
+}
+.pop-header span{
+  font-weight: bold;
+}
+.close-btn{
+  color: #ff7144;
+  font-size: 4rem;
+  background-color: transparent;
+  cursor: var(--pointer);
+  transform: rotate(0deg);
+  transition: transform .3s ease-out;
+}
+.close-btn:hover{
+  transform: rotate(90deg);
+}
+/* 팝업 상단 */
+.pop-body-top{
+  display: flex;
+  gap: 10px;
+}
+.pop-body-top figure{
+  width: 40%;
+  aspect-ratio: 1.33/1;
+  height: auto;
+}
+.pop-body-top .tit{
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: left;
+}
+.h-bar{
+  width: 30%;
+  margin: 10px 4px;
+  height: 2px;
+  background-color: var(--black);
+}
+.pop-body-top .sub{
+  white-space:pre-wrap;
+}

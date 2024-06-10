@@ -1,4 +1,4 @@
-import { useLayoutEffect, useState } from "react";
+import { useLayoutEffect } from "react";
 import MainArea from "../layout/MainArea";
 import TopArea from "../layout/TopArea";
 import { menuStore } from "../../stores/store";

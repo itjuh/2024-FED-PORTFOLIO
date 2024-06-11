@@ -44,5 +44,5 @@ export function Icon({iconName, iconSize, iconColor}) {
     color: iconColor,
     fontSize: iconSize + "px",
   };
-  return <div style={iconStyle}>{iconMap.iconName}</div>;
+  return <div style={iconStyle}>{iconMap[iconName]}</div>;
 }

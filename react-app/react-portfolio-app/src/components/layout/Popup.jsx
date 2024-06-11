@@ -1,8 +1,8 @@
 import { useEffect, useLayoutEffect } from "react";
 import { popStore } from "../../stores/store";
 import { Option } from "../modules/Option";
-import "../../css/core.css";
 import "../../css/popup.css";
+import { Icon } from "../modules/Icon";
 
 export function Popup() {
   const popStatus = popStore((state) => state.popStatus);
@@ -14,6 +14,7 @@ export function Popup() {
   let subTitle;
   let basic;
   let select;
+  let isrc = null;
   try {
     popData = require("../data/optionData.json");
     if (popName) {
@@ -24,7 +25,9 @@ export function Popup() {
   }
   function OptionSet(obj) {
     popData = obj.find((v) => v.itemName == popName);
-    console.log(popData, popData["mainTitle"]);
+    if(popName !== "안주현소개"){
+      isrc = popData["src"];
+    }
     topTitle = popData["mainTitle"];
     subTitle = popData["subTitle"];
     basic = popData["basic"];
@@ -33,8 +36,8 @@ export function Popup() {
   useLayoutEffect(() => {
     if (popStatus) {
       document.querySelector(".popup-back").style.display = "flex";
-    }else{
-        document.querySelector(".popup-back").style.display = "none";
+    } else {
+      document.querySelector(".popup-back").style.display = "none";
     }
   }, [popStatus]);
   return (
@@ -42,14 +45,27 @@ export function Popup() {
       <div className="popup">
         <div className="pop-header">
           <span>옵션을 선택해주세요</span>
-          <button className="close-btn" onClick={popChg}>×</button>
+          <button className="close-btn" onClick={popChg}>
+            ×
+          </button>
         </div>
         <div className="pop-body-top">
-          <figure></figure>
+          {
+            popStatus && isrc && 
+            <figure>
+              <img src={isrc} alt={topTitle+"이미지"} />
+            </figure>
+          }
+          {
+            popStatus && isrc === null &&
+            <figure>
+              <Icon iconName={"face"} iconSize={100} iconColor={"var(--coral)"}/>
+            </figure>
+          }
           <figcaption>
             <div className="tit">{topTitle}</div>
             <div className="h-bar"></div>
-            <div className="sub">{subTitle.replace("^","\n")}</div>
+            {subTitle && <div className="sub">{subTitle.replace("^", "\n")}</div>}
           </figcaption>
         </div>
         {popStatus && (
@@ -58,6 +74,10 @@ export function Popup() {
             <Option option={select} />
           </div>
         )}
+        <div className="pop-footer">
+          <button className="main-btn del-btn over-btn">취소</button>
+          <button className="main-btn order-btn over-btn">주문담기</button>
+        </div>
       </div>
     </div>
   );

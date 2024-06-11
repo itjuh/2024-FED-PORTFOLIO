@@ -69,9 +69,9 @@ export default function MainArea() {
                 <FaPause />
             }
           </button>
-          <div className="main-btn del-btn over-btn" onClick={resetMenu}>
+          <button className="main-btn del-btn over-btn" onClick={resetMenu}>
             삭제하기
-          </div>
+          </button>
           <button className="main-btn order-btn over-btn" onClick={goLink}>
             주문하기
           </button>

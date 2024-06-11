@@ -1,0 +1,50 @@
+@charset "utf-8";
+
+.option-tit {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 1.8rem 0;
+}
+.option-area {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 2rem;
+}
+.icon-label {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+  cursor: var(--pointer);
+}
+.icon-label input[type="checkbox"] {
+  display: none;
+}
+.option-icon {
+  position: relative;
+  width: 80px;
+  aspect-ratio: 1/1;
+  border-radius: 5px;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+/* 체크표시 된 경우 */
+.icon-label input[type="checkbox"]:checked + .option-icon {
+  outline: 3px solid var(--mint);
+}
+.icon-check {
+  display: none;
+  position: absolute;
+  top: 0.3rem;
+  left: 0.3rem;
+}
+.icon-label input[type="checkbox"]:checked + .option-icon > .icon-check {
+  display: block;
+}
+.pop-footer {
+  display: flex;
+  gap: 2.5rem;
+  padding: 2rem 0px 1rem;
+}

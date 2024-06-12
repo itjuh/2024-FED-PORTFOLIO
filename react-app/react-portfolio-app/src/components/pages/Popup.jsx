@@ -1,4 +1,4 @@
-import { useEffect, useLayoutEffect } from "react";
+import { useLayoutEffect } from "react";
 import { popStore } from "../../stores/store";
 import { Option } from "../modules/Option";
 import "../../css/popup.css";
@@ -59,7 +59,7 @@ export function Popup() {
           {
             popStatus && isrc === null &&
             <figure>
-              <Icon iconName={"face"} iconSize={100} iconColor={"var(--coral)"}/>
+              <Icon iconName={"face"} iconSize={"100px"} iconColor={"var(--coral)"}/>
             </figure>
           }
           <figcaption>

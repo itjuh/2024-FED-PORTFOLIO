@@ -4,19 +4,10 @@ import { LiaKeyboard } from "react-icons/lia";
 import { SiBuymeacoffee } from "react-icons/si";
 import "../data/itemData.json";
 import { menuStore, popStore } from "../../stores/store";
+import { Icon } from "./Icon";
 
 export function Items() {
   // part 선택그룹 이름
-
-  // let goods;
-  // fetch("./data/itemData.json", {
-  //     headers: {
-  //         Accept: "application / json",
-  //       },
-  //       method: "GET",
-  //     })
-  //   .then(res => res.json())
-  //   .then(data => {goods = data['items'];});
   const { pickMenu, category } = menuStore((state) => state);
   const { setPopName, popChg } = popStore((state)=>state);
   let goods = require("../data/itemData.json");
@@ -29,13 +20,6 @@ export function Items() {
     goods = require("../data/itemData.json");
     goods = goods["items"];
   }
-
-  const iconMap = {
-    "face": <MdFace3 />,
-    "cake": <RiCake3Line />,
-    "keyboard": <LiaKeyboard />,
-    "coffee": <SiBuymeacoffee />,
-  };
   // 클릭하면 팝업상태 바꾸기 => x 도 팝업상태 바꾸기
   // 선택하기도 팝업상태 바꾸기
   // 팝업 name에 클릭한 이름 넣고
@@ -50,9 +34,7 @@ export function Items() {
     }}>
     {/* <li className="lnb-unit" key={i} onClick={() => pickMenu([v.title, v.link])}> */}
       <div className="lnb-part">{v.enPart}</div>
-      <div className="lnb-icon" style={{ color: v.color }}>
-        {iconMap[v.src]}
-      </div>
+      <Icon iconName={v.src} iconColor={v.color} iconSize={"var(--main-icon)"} />
       <div className="lnb-tit">
         <span style={{ backgroundImage: "linear-gradient(120deg, " + v.color + " 90%, " + v.color + " 100%)" }}>{v.title}</span>
         {v.recommand !== null && <span style={{ color: "#e9c603", fontSize: "2rem" }}>{"★".repeat(v.recommand)}</span>}

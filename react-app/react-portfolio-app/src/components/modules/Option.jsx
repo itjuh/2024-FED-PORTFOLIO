@@ -9,13 +9,13 @@ export function Option({ option }) {
       <div className="option-tit">{propsOption.title}</div>
       <div className="option-area">
         {propsOption.option.map((v, i) => (
-          <label htmlFor={v.icon} className="icon-label">
+          <label htmlFor={v.icon} className="icon-label"  key={i}>
               <input type="checkbox" id={v.icon} defaultChecked />
-              <div key={i} className="option-icon">
+              <div className="option-icon">
                 <div className="icon-check">
-                  <Icon iconName={"check"} iconSize={20} iconColor={"var(--mint)"} />
+                  <Icon iconName={"check"} iconSize={"20px"} iconColor={"var(--mint)"} />
                 </div>
-                <Icon iconName={v.icon} iconSize={40} iconColor={null} />
+                <Icon iconName={v.icon} iconSize={"var(--pop-icon)"} iconColor={null} />
                 {v.label}
               </div>
             </label>

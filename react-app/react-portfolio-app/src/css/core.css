@@ -16,6 +16,11 @@
 
     --stroke: 2px solid var(--black);
     --stroke-bold: 4px solid var(--black);
+
+    --main-icon: 80px;
+    --main-icon-lh: 72px;
+    --pop-icon: 40px;
+    --pop-icon-lh: 32px;
 }
 
 
@@ -73,4 +78,13 @@
     font-optical-sizing: auto;
     font-weight: 500;
     src: url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap');
+}
+
+@media screen and (max-width: 600px){
+    :root{
+        --main-icon: 70px;
+        --main-icon-lh: 63px;
+        --pop-icon: 35px;
+        --pop-icon-lh: 31px;
+    }
 }

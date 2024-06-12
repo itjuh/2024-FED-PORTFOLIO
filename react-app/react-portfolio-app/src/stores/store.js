@@ -18,6 +18,10 @@ const menuStore = create(set =>({
     resetMenu: ()=> set({pickedMenu: null})
 }))
 
+const recipeStore = create(set=>({
+    
+}))
+
 const popStore = create(set=>({
     popName: null,
     popStatus: false,

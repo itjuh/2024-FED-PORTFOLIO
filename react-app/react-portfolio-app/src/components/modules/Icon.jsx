@@ -2,10 +2,10 @@ import { FaHome, FaMarker, FaCheckCircle, FaPlusSquare, FaAddressBook } from "re
 import { FaLink, FaUserGear, FaPersonCircleExclamation } from "react-icons/fa6";
 import { HiOutlineReceiptPercent, HiAcademicCap } from "react-icons/hi2";
 import { RiCake3Line, RiPsychotherapyFill } from "react-icons/ri";
-import { MdFace3 } from "react-icons/md";
-import { LiaKeyboard } from "react-icons/lia";
-import { SiBuymeacoffee } from "react-icons/si";
+import { LiaKeyboard, LiaReceiptSolid } from "react-icons/lia";
 import { BsFileEarmarkPersonFill, BsHourglassSplit } from "react-icons/bs";
+import { MdFace3 } from "react-icons/md";
+import { SiBuymeacoffee } from "react-icons/si";
 import { TbTargetArrow } from "react-icons/tb";
 import { TiBusinessCard } from "react-icons/ti";
 import { GrDocumentUser } from "react-icons/gr";
@@ -13,7 +13,6 @@ import { LuSprout } from "react-icons/lu";
 
 export function Icon({iconName, iconSize, iconColor}) {
   // 아이콘사이즈, 글자크기 선택받기
-  console.log("불러옴", iconName);
   const iconMap = {
     face: <MdFace3 />,
     cake: <RiCake3Line />,
@@ -36,13 +35,22 @@ export function Icon({iconName, iconSize, iconColor}) {
     career: <TiBusinessCard />,
     introduction: <GrDocumentUser />,
     leap: <LuSprout />,
+    receipt: <LiaReceiptSolid />,
   };
   if (iconColor === null) {
     iconColor = "#434343";
-  } 
+  }
+  let lh;
+  if(isNaN(iconSize)){
+    lh = iconSize.replace("icon","icon-lh");
+  }else{
+    lh = iconSize;
+  }
   const iconStyle = {
     color: iconColor,
-    fontSize: iconSize + "px",
+    fontSize: iconSize,
+    textAlign: "center",
+    lineHeight: lh,
   };
   return <div style={iconStyle}>{iconMap[iconName]}</div>;
 }

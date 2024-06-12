@@ -29,6 +29,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: .3rem;
 }
 /* 체크표시 된 경우 */
 .icon-label input[type="checkbox"]:checked + .option-icon {

@@ -203,19 +203,16 @@
     }
     .items-area ul {
         width: 90%;
-        gap: 3rem;
+        gap: 2rem;
     }
     /* 메뉴아이템 unit */
     .lnb-unit {
         max-width: 236px;
-        width: 45%;
+        width: calc((100% - 2rem) / 2);
         height: auto;
         padding: 8px;
     }
-    /* unit 아이콘 */
-    .lnb-icon {
-        font-size: 70px;
-    }
+    /* unit 타이틀 */
     .lnb-tit span:first-child {
         font-size: 2rem;
     }

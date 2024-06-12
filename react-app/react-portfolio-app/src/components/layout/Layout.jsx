@@ -1,6 +1,6 @@
 import { useLayoutEffect } from "react";
 import { Outlet } from "react-router-dom";
-import { Popup } from "./Popup";
+import { Popup } from "../pages/Popup";
 
 export function Layout() {
   useLayoutEffect(() => {

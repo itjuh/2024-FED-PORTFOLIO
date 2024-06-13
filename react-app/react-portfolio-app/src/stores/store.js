@@ -12,14 +12,10 @@ const timeStore = create(set => ({
 
 const menuStore = create(set =>({
     category: "추천메뉴",
-    pickedMenu: null, //[tit, link]형태
-    pickCategory: (name)=> set({category: name}),
-    pickMenu: (menuName)=> set({pickedMenu: menuName}),
-    resetMenu: ()=> set({pickedMenu: null})
-}))
-
-const recipeStore = create(set=>({
-    
+    orderList: null, //{tit:[...option],}형태
+    setCategory: (name)=> set({category: name}),
+    pickMenu: (menuName)=> set({orderList: menuName}),
+    resetMenu: ()=> set({orderList: null})
 }))
 
 const popStore = create(set=>({

@@ -1,6 +1,9 @@
 24.06.12 작업사항 기록
 
 0. 옵션 선택사항 기록하기
+-> 이미 담은 상품 => 주문하기 클릭 시 선택옵션이 변경됩니다 안내 => 아니면 취소
+-> 새 상품 => 주문하기 클릭 시 하단에 기록됨
+-> 삭제 누르면 => 바로삭제
 1. 영수증 레이아웃 구성하기
 2. 영수증 내용 컴포넌트 분리하기
 3. 영수증 내용 공통구성 나눠서 json 정리하기
@@ -10,3 +13,8 @@
 2. 팝업창 이미지 늦게 뜸(왜지?)
     =>용량줄여야하나 고민중
     =>줄여서 해결
+
+참고
+https://www.rallit.com/hub/resumes/1156614/%EB%AC%B8%EC%A0%95%EB%AF%BC
+https://tartan-bison-077.notion.site/Front-end-Developer-41efb49efa284ed0bce61ca5ffee6980
+https://www.figma.com/design/NRuSs8JfssptJXWw2GxxFG/Untitled?node-id=177-875&t=iVaIdrzvn7FO8iKd-0

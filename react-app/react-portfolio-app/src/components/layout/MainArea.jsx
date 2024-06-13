@@ -9,7 +9,7 @@ import { FaPause, FaPlay } from "react-icons/fa";
 export default function MainArea() {
   console.log("랜더링됨! main");
   // 선택메뉴[tit,link]
-  const { pickedMenu, resetMenu } = menuStore((state) => state);
+  const { orderList, resetMenu } = menuStore((state) => state);
   // 리랜더링 방지를 위해 필요한 state만 가져옴
   const timeEndStatus = timeStore((state) => state.timeEndStatus);
   const timeStopGo = timeStore((state) => state.timeStopGo);
@@ -18,17 +18,17 @@ export default function MainArea() {
   const nav = useNavigate();
   useEffect(() => {
     if (timeEndStatus) {
-      if (pickedMenu) {
-        nav(pickedMenu[1]);
+      if (orderList) {
+        nav(orderList[1]);
       } else {
         nav("profile");
       }
     }
-  }, [timeEndStatus,pickedMenu]);
+  }, [timeEndStatus,orderList]);
 
   function goLink() {
-    if (pickedMenu) {
-      nav(pickedMenu[1]);
+    if (orderList) {
+      nav(orderList[1]);
     }
   }
   return (
@@ -40,7 +40,7 @@ export default function MainArea() {
       </div>
       <div className="view-area">
         <div className="selected-view">
-          {pickedMenu == null && (
+          {orderList == null && (
             <div className="sel-null">
               선택하신 상품이 없습니다.
               <br />
@@ -49,9 +49,9 @@ export default function MainArea() {
               자동으로 이동합니다.
             </div>
           )}
-          {pickedMenu !== null && (
+          {orderList !== null && (
             <>
-              <span className="sel-menu">{pickedMenu[0]}</span>
+              <span className="sel-menu">{orderList[0]}</span>
               <span className="sel-cnt">수량 1개</span>
               <div className="alert-box">남은시간 종료 후 선택 상품으로 이동합니다.</div>
             </>

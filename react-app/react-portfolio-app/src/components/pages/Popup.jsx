@@ -6,9 +6,9 @@ import { Icon } from "../modules/Icon";
 
 export function Popup() {
   const popStatus = popStore((state) => state.popStatus);
-  const popName = popStore((state) => state.popName);
   const popChg = popStore((state) => state.popChg);
-  console.log("팝업랜더링", popStatus, popName);
+  const popName = popStore((state) => state.popName);
+  // console.log("팝업랜더링", popStatus, popName);
   let popData;
   let topTitle;
   let subTitle;
@@ -18,12 +18,12 @@ export function Popup() {
   try {
     popData = require("../data/optionData.json");
     if (popName) {
-      OptionSet(popData);
+      optionSet(popData);
     }
   } catch (e) {
     alert(e);
   }
-  function OptionSet(obj) {
+  function optionSet(obj) {
     popData = obj.find((v) => v.itemName == popName);
     if(popName !== "안주현소개"){
       isrc = popData["src"];
@@ -33,6 +33,18 @@ export function Popup() {
     basic = popData["basic"];
     select = popData["select"];
   }
+  const popPick = ()=>{
+    let pickData = [];
+    const checked = document.querySelectorAll(".pop-body-option input:checked");
+    checked.forEach(v=>{
+      pickData.push(v.value);
+    })
+    console.log(pickData);
+    // 창 제목(popName)+데이터(pickData)를 저장하기!
+    
+    // 창 닫기
+    popChg();
+  };
   useLayoutEffect(() => {
     if (popStatus) {
       document.querySelector(".popup-back").style.display = "flex";
@@ -75,8 +87,8 @@ export function Popup() {
           </div>
         )}
         <div className="pop-footer">
-          <button className="main-btn del-btn over-btn">취소</button>
-          <button className="main-btn order-btn over-btn">주문담기</button>
+          <button className="main-btn del-btn over-btn" onClick={popChg}>취소</button>
+          <button className="main-btn order-btn over-btn" onClick={popPick}>주문담기</button>
         </div>
       </div>
     </div>

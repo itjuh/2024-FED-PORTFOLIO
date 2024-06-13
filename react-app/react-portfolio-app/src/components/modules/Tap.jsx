@@ -1,7 +1,7 @@
 import { menuStore } from "../../stores/store";
 
 export function Tap() {
-    const {category, pickCategory} = menuStore(state=>state);
+    const {category, setCategory} = menuStore(state=>state);
     // chgPart(탭변경) , part(선택 탭)
     let txt = ["추천메뉴", "메인상품", "포트폴리오"];
 
@@ -10,7 +10,7 @@ export function Tap() {
         let selectedTap = e.target.parentNode;
         allTap.forEach(v=>v.classList.remove('on'));
         selectedTap.classList.add('on');
-        pickCategory(e.target.innerText);
+        setCategory(e.target.innerText);
     }
 
     if (Array.isArray(txt)) {

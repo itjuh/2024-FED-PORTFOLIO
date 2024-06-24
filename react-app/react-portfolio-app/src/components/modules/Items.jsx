@@ -1,14 +1,10 @@
-import { MdFace3 } from "react-icons/md";
-import { RiCake3Line } from "react-icons/ri";
-import { LiaKeyboard } from "react-icons/lia";
-import { SiBuymeacoffee } from "react-icons/si";
 import "../data/itemData.json";
 import { menuStore, popStore } from "../../stores/store";
 import { Icon } from "./Icon";
 
 export function Items() {
   // part 선택그룹 이름
-  const { pickMenu, category } = menuStore((state) => state);
+  const { category } = menuStore((state) => state);
   const { setPopName, popChg } = popStore((state)=>state);
   let goods = require("../data/itemData.json");
   goods = goods["items"];
@@ -32,7 +28,7 @@ export function Items() {
         setPopName(v.title);
         popChg();
     }}>
-    {/* <li className="lnb-unit" key={i} onClick={() => pickMenu([v.title, v.link])}> */}
+    {/* <li className="lnb-unit" key={i} onClick={() => setOrderList([v.title, [...option]])}> */}
       <div className="lnb-part">{v.enPart}</div>
       <Icon iconName={v.src} iconColor={v.color} iconSize={"var(--main-icon)"} />
       <div className="lnb-tit">

@@ -43,7 +43,7 @@ const siteData = [
     {
         tit: "더 진한",
         content: "Vue.js로 제작한 반응형 웹페이지",
-        pages:['메인','상품소개'],
+        pages:['메인'],
         period: "2024.02 ~ 2024.02",
         tech: ["Vue.js", "JQUERY", "HTML5", "CSS3", "JAVASCRIPT"],
         imgsrc: "./images/size_img/the_main.jpg",

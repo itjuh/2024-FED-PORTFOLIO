@@ -18,3 +18,20 @@
 https://www.rallit.com/hub/resumes/1156614/%EB%AC%B8%EC%A0%95%EB%AF%BC
 https://tartan-bison-077.notion.site/Front-end-Developer-41efb49efa284ed0bce61ca5ffee6980
 https://www.figma.com/design/NRuSs8JfssptJXWw2GxxFG/Untitled?node-id=177-875&t=iVaIdrzvn7FO8iKd-0
+
+24.6.24 작업 변경사항 기록
+
+1. RemainingTime.jsx에 pause stop버튼 이동 => 메뉴변경에 따른 타이머 리랜더링 해결
+
+2. Store.js에서 orderListkey 삭제=> 원래 객체 키들로 이루어진 store인데
+기존값을 가공해서 사용하도록 수정
+키값을 저장하는 스토어가 있었던 이유가 객체를 그대로 수정할 줄 몰라서 사용 함
+[ 객체 제거 ]
+const {[key]:value, ...새객체} = 기존객체
+[key]:value를 제거한 새 객체 만들기 
+[ 객체 추가 ]
+const 새객체 = {[key]:value, ...기존객체}
+
+3. 삭제 시 빈객체가 남지않도록 처리
+
+4. 남은시간 종료 시 객체 비우기

@@ -1,15 +1,14 @@
 .frame-box {
     position: absolute;
+    bottom: 0;
     display: flex;
     justify-content: end;
     flex-direction: column;
-    padding: 50px 30px 0px;
+    padding: 50px 30px;
     left: calc(50%);
     transform: translateX(-50%);
-    margin-top: 25px;
     background-color: var(--black);
     border-radius: 10px 10px 0px 0px;
-    border: var(--stroke-bold);
     box-shadow: var(--shadow-more);
 }
 .header {

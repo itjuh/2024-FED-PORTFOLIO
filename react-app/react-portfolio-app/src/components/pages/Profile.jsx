@@ -1,5 +1,5 @@
 import { LiaReceiptSolid } from "react-icons/lia";
-import "../../css/profile.css";
+// import "../../css/profile.css";
 import { useEffect, useLayoutEffect } from "react";
 import { infoData, detailData, txtMsg, etcLinkData } from "../data/infoData.js";
 import { Link } from "react-router-dom";

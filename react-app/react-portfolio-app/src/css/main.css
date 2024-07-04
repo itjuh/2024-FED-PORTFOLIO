@@ -116,8 +116,19 @@
     line-height: 1.5;
 }
 /* 선택상품 있는 경우 */
+.sel-group{
+    padding: .4rem 0;
+}
 .sel-cnt {
     float: right;
+    font-family: Pretendard;
+    font-weight: 500;
+    font-size: 1.8rem;
+    cursor: var(--pointer);
+}
+.sel-cnt:hover{
+    color: var(--coral);
+    font-weight: 700;
 }
 .alert-box {
     position: absolute;

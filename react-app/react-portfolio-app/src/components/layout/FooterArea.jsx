@@ -1,26 +1,28 @@
-import { Link } from "react-router-dom";
-import { txtMsg } from "../data/infoData";
 import { Icon } from "../modules/Icon";
+import { ReceiptMain } from "../modules/ReceiptMain";
+import "../../css/footerarea.css";
+import { orderStore } from "../../stores/store";
+import { useLayoutEffect } from "react";
 
-export default function FooterArea(){
-    return(<div className="footer">
-        <div className="receipt-page">
-            <div className="receipt-tit">
-                <Icon iconName={"receipt"} iconSize={"35px"} iconColor={"#fff"} />
-                <span>receipt</span>
-            </div>
-            {/* <div className="receipt-area">
-                <div className="barcord">
-                    <figure>
-                        <img src="./images/barcord.png" alt="바코드이미지" />
-                    </figure>
-                    <figcaption>{txtMsg}</figcaption>
-                </div>
-            </div>
-            <div className="btn-box">
-                <button href="#" className="link-btn over-btn-l">영수증 다시보기 ↑</button>
-                <button href="#" className="link-btn over-btn-l">추가 주문하기 ↑</button>
-            </div> */}
+export default function FooterArea() {
+  const orderStatus = orderStore((state) => state.orderStatus);
+  console.log(orderStatus, "프린트 상태값");
+
+  useLayoutEffect(()=>{
+    if(orderStatus){
+        document.querySelector(".receipt-area").innerHTML = <ReceiptMain />
+    }
+  },[orderStatus])
+  return (
+    <div className="footer">
+      <div className="receipt-printer">
+        <div className="printer-tit">
+          <Icon iconName={"receipt"} iconSize={"35px"} iconColor={"#fff"} />
+          <span>receipt</span>
         </div>
-    </div>)
+      </div>
+      <div className="receipt-area">
+      </div>
+    </div>
+  );
 }

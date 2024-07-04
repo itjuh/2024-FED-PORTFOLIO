@@ -1,0 +1,164 @@
+[
+  {
+    "itemName": "안주현소개",
+    "optionName": "사진",
+    "optionContent": "",
+    "optionType":"photo"
+  },
+  {
+    "itemName": "안주현소개",
+    "optionName": "연락처",
+    "optionContent": ["010.2144.9679","jh.2144.9679@gmail.com"],
+    "optionType":"list"
+  },
+  {
+    "itemName": "안주현소개",
+    "optionName": "개인정보",
+    "optionContent": ["1989.12","서울시 중랑구 거주","서울과학기술대학교(신소재공학과) 졸업"],
+    "optionType":"list"
+  },
+  {
+    "itemName": "안주현소개",
+    "optionName": "MBTI",
+    "optionContent": "ENTP",
+    "optionType":"text"
+  },
+  {
+    "itemName": "안주현소개",
+    "optionName": "링크",
+    "optionContent": ["깃허브", "블로그", "이력서"],
+    "optionType":"list"
+  },
+  {
+    "itemName": "안주현소개",
+    "optionName": "사용기술",
+    "optionContent": ["html5","css3","javascript","jquery","react","zustand","vue.js","flutter"],
+    "optionType":"list"
+  },
+  {
+    "itemName": "안주현소개",
+    "optionName": "교육",
+    "optionContent": ["2020.10 ~ 2021.03 : 자바,파이썬기반 빅데이터분석 머신러닝활용","2023.07 ~ 2024.01 : 프론트엔드(React, PHP) 플러터(Flutter)활용 웹&앱개발 양성과정"],
+    "optionType":"text"
+  },
+  {
+    "itemName": "안주현소개",
+    "optionName": "사회경험",
+    "optionContent": "",
+    "optionType":"text"
+  },
+  {
+    "itemName": "안주현소개",
+    "optionName": "자기소개서",
+    "optionContent": "",
+    "optionType":"text"
+  },
+  {
+    "itemName": "온고롱케이크",
+    "optionName": "제작기간",
+    "optionContent": "2023.08 ~ 2023.10",
+    "optionType":"text"
+  },
+  {
+    "itemName": "온고롱케이크",
+    "optionName": "기여도",
+    "optionContent": "1인 개발, 100%",
+    "optionType":"text"
+  },
+  {
+    "itemName": "온고롱케이크",
+    "optionName": "제작의도",
+    "optionContent": ["순수 자바스크립트를 사용한 페이지 구현","케이크 주문제작의 편의성 제공"],
+    "optionType":"text"
+  },
+  {
+    "itemName": "온고롱케이크",
+    "optionName": "링크",
+    "optionContent": "https://url.kr/a7ecof",
+    "optionType":"text"
+  },
+  {
+    "itemName": "온고롱케이크",
+    "optionName": "사용기술",
+    "optionContent": ["javascript","html5","css3"],
+    "optionType":"list"
+  },
+  {
+    "itemName": "온고롱케이크",
+    "optionName": "개발포인트",
+    "optionContent": ["주문페이지^좌우 구역을 나누어서 주문절차와 단계를 확인하면서 주문서 작성을 안내","소개페이지^화면구성을 변경하고 글자를 이벤트로 등장시켜 몰입감을 높임","메인페이지"],
+    "optionType":"text"
+  },
+  {
+    "itemName": "레오폴드키보드",
+    "optionName": "제작기간",
+    "optionContent": "2023.11 ~ 2024.01",
+    "optionType":"text"
+  },
+  {
+    "itemName": "레오폴드키보드",
+    "optionName": "기여도",
+    "optionContent": "1인 개발, 100%",
+    "optionType":"text"
+  },
+  {
+    "itemName": "레오폴드키보드",
+    "optionName": "제작의도",
+    "optionContent": ["리액트 페이지 개발","반응형 웹 페이지 구성"],
+    "optionType":"text"
+  },
+  {
+    "itemName": "레오폴드키보드",
+    "optionName": "링크",
+    "optionContent": "https://url.kr/ymgexl",
+    "optionType":"text"
+  },
+  {
+    "itemName": "레오폴드키보드",
+    "optionName": "사용기술",
+    "optionContent": ["react","javascript","jquery","html5","css3"],
+    "optionType":"list"
+  },
+  {
+    "itemName": "레오폴드키보드",
+    "optionName": "개발포인트",
+    "optionContent": "",
+    "optionType":"text"
+  },
+  {
+    "itemName": "더진한베이스",
+    "optionName": "제작기간",
+    "optionContent": "2024.02 ~ 2024.02",
+    "optionType":"text"
+  },
+  {
+    "itemName": "더진한베이스",
+    "optionName": "기여도",
+    "optionContent": "1인 개발, 100%",
+    "optionType":"text"
+  },
+  {
+    "itemName": "더진한베이스",
+    "optionName": "제작의도",
+    "optionContent": "",
+    "optionType":"text"
+  },
+  {
+    "itemName": "더진한베이스",
+    "optionName": "링크",
+    "optionContent": "https://buly.kr/5UFoY68",
+    "optionType":"text"
+  },
+  {
+    "itemName": "더진한베이스",
+    "optionName": "사용기술",
+    "optionContent": ["vue.js","javascript","jquery","html5","css3"],
+    "optionType":"list"
+  },
+  {
+    "itemName": "더진한베이스",
+    "optionName": "개발포인트",
+    "optionContent": [],
+    "optionType":"text"
+  }
+]

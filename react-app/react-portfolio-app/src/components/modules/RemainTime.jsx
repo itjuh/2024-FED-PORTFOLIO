@@ -6,7 +6,7 @@ export function RemainTime() {
   // 남은시간
   const remainTime = timeStore((state) => state.remainTime);
   const decreaseRemainTime = timeStore((state) => state.decreaseRemainTime);
-  const timeEnd = timeStore((state) => state.timeEnd);
+  const resetTime = timeStore((state) => state.resetTime);
   const timeStopGo = timeStore((state) => state.timeStopGo);
   const timePause = timeStore((state) => state.timePause);
   const resetMenu = menuStore((state) => state.resetMenu);
@@ -15,7 +15,7 @@ export function RemainTime() {
     const autoI = setInterval(decreaseRemainTime, 1000);
     if (remainTime == 0) {
       clearInterval(autoI);
-      timeEnd();
+      resetTime();
       resetMenu();
     }
     if (timePause) {

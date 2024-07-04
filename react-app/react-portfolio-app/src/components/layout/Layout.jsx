@@ -1,6 +1,7 @@
 import { useLayoutEffect } from "react";
 import { Outlet } from "react-router-dom";
 import { Popup } from "../pages/Popup";
+import FooterArea from "./FooterArea";
 
 export function Layout() {
   useLayoutEffect(() => {
@@ -9,6 +10,7 @@ export function Layout() {
   return (
     <div className="frame-box">
       <Outlet />
+      <FooterArea />
       <Popup />
     </div>
   );

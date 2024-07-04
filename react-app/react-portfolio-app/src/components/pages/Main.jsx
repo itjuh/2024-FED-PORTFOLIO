@@ -1,8 +1,8 @@
 import { useLayoutEffect } from "react";
 import MainArea from "../layout/MainArea";
 import TopArea from "../layout/TopArea";
-import { menuStore } from "../../stores/store";
 import FooterArea from "../layout/FooterArea";
+import { menuStore } from "../../stores/store";
 
 // TopArea - Taps에서 part선택
 // MainArea - items에서 매칭해서 나열
@@ -24,7 +24,6 @@ export function Main() {
         <>
             <TopArea/>
             <MainArea/>
-            <FooterArea/>
         </>
     );
 }

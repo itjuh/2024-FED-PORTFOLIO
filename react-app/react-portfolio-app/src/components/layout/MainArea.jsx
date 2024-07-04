@@ -1,42 +1,22 @@
 import { Items } from "../modules/Items";
 import "../../css/main.css";
-import { useEffect, useLayoutEffect } from "react";
 import { RemainTime } from "../modules/RemainTime";
-import { useNavigate } from "react-router-dom";
-import { menuStore, timeStore } from "../../stores/store";
+import { menuStore, orderStore } from "../../stores/store";
 
 export default function MainArea() {
   // 선택메뉴[tit,link]
   // 리랜더링 방지를 위해 필요한 state만 가져옴
   const { orderList, resetMenu } = menuStore((state) => state);
-  const setOrderList = menuStore((state)=>state.setOrderList);
-  const timeEndStatus = timeStore((state) => state.timeEndStatus);
-  console.log("랜더링됨! main",orderList);
+  const setOrderList = menuStore((state) => state.setOrderList);
+  const setOrderStatus = orderStore((state) => state.setOrderStatus);
+  console.log("랜더링됨! main", orderList);
 
-  // 페이지 이동
-  const nav = useNavigate();
-
-  useEffect(() => {
-    // if (timeEndStatus) {
-    //   if (orderList) {
-    //     nav(orderList[1]);
-    //   } else {
-    //     nav("profile");
-    //   }
-    // }
-  }, [timeEndStatus, orderList]);
-
-  function goLink() {
-    if (orderList) {
-      nav(orderList[1]);
-    }
-  }
-  function delItem(itemName){
+  function delItem(itemName) {
     // 새로운 객체 생성하여 해당 아이템 제외
     const { [itemName]: deletedItem, ...newOrderList } = orderList;
-    if(Object.keys(newOrderList).length === 0){
+    if (Object.keys(newOrderList).length === 0) {
       resetMenu();
-    }else{
+    } else {
       setOrderList(newOrderList);
     }
   }
@@ -58,13 +38,14 @@ export default function MainArea() {
               자동으로 이동합니다.
             </div>
           )}
-          {orderList !== null &&(
+          {orderList !== null && (
             <>
               {Object.keys(orderList).map((itemName, index) => (
                 <div className="sel-group" key={index}>
                   <span className="sel-menu">{itemName}</span>
-                  <button className="sel-cnt" 
-                    onClick={()=>delItem(itemName)}>삭제</button>
+                  <button className="sel-cnt" onClick={() => delItem(itemName)}>
+                    삭제
+                  </button>
                 </div>
               ))}
               <div className="alert-box">시간이 초과되면 삭제됩니다.</div>
@@ -76,7 +57,7 @@ export default function MainArea() {
           <button className="main-btn del-btn over-btn" onClick={resetMenu}>
             삭제하기
           </button>
-          <button className="main-btn order-btn over-btn" onClick={goLink}>
+          <button className="main-btn order-btn over-btn" onClick={setOrderStatus}>
             주문하기
           </button>
         </div>

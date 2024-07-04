@@ -1,0 +1,22 @@
+/* 타이틀 */
+.printer-tit {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0 1rem;
+  padding-top: 2rem;
+}
+.printer-tit span {
+  font-size: 2.5rem;
+  color: #fff;
+}
+.printer-tit::after {
+  content: "";
+  position: absolute;
+  width: 95%;
+  height: 5px;
+  background-color: #c2c2c2;
+  bottom: -5px;
+  border-radius: 5px;
+}
